@@ -1,0 +1,44 @@
+<IsisScript>
+	<trace>xOn</trace>
+	<section>
+		<field action=cgi tag=5015>cipar</field>
+		<field action=cgi tag=5001>base</field>
+	  	<field action=cgi tag=2000>Mfn</field>
+	  	<field action=cgi tag=9010 split=occ>ValorCapturado</field>
+	  	<field action=cgi tag=9060>login</field>
+	  	<field action=cgi tag=9061>password</field>
+	  	<field action=cgi tag=3030>Formato</field>
+		<field action=add tag=9090 split=occ><pft>v9010</pft></field>
+		<field action=cgi tag=1>path_db</field>
+	<display><pft></pft></display>
+	 	<parm name=cipar>
+	  		<pft>replace(s(cat(v5015)),'%path_database%',v1)/</pft>
+	  	</parm>
+		<field action="replace" tag="5066"><pft>cat('STW')</pft></field>
+		<parm name=stw><pft>if p(v5066) then 'STW' fi</pft></parm>
+		<parm name=actab><pft>cat('isisac.tab')</pft></parm>
+		<parm name=uctab><pft>cat('isisuc.tab')</pft></parm>
+	    <label>ACTUALIZAR</label>
+		<do task="update">
+			<parm name="db"><pft>v5001</pft></parm>
+			<parm name="mfn"><pft>v2000</pft></parm>
+			<parm name=lockid><pft>v9060</pft></parm>
+			<parm name="fst"><pft>cat(v5001'.fst')</pft></parm>
+			<parm name="buffersize">200000</parm>
+	        <parm name=MAX_TMP_STRING>200000</parm>
+			<field action=define tag=1101>Isis_Lock</field>
+			<field action=define tag=1102>Isis_Status</field>
+			<update>
+				<field action=import tag=9090>9090</field>
+					<proc><pft>(v9090/)
+						</pft>
+					</proc>
+					<proc><pft>'d9090'/</pft></proc>
+	        		<write>Unlock</write>
+				<display><pft type=reload><pft>if p(v3030) then '@'v3030'.pft' fi</pft></pft></display>
+			</update>
+		</do>
+		<flow action="exit">1</flow>
+
+	</section>
+</IsisScript>

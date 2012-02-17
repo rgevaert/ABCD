@@ -1,0 +1,72 @@
+'<html>'/
+'<title>Orbita Documental</title>'/
+'<link rel=stylesheet href=js/basic.css type=text/css>'/
+'<link rel=stylesheet href=js/style01.css type=text/css>'/
+'<script language=javascript>'/
+'var insWindow'/
+'login="'v9060'"'/
+'password="'v9061'"'/
+'function LeerRegistro(Mfn){'/
+'   userid=window.opener.top.userid'/ 
+'	window.opener.top.buscar=""'/
+'   window.opener.top.xeditar="S"'/
+'	window.opener.top.mfn=Mfn'/	
+'	loc="fmt.php?login="+login+"&password="+password+"&Opcion=leer&Mfn="+Mfn+"&ver=N&base='v5001'&cipar='v5015'"'/
+'	window.opener.top.main.location=loc'/
+'   window.opener.top.main.focus()'/
+
+'}'/
+
+'function LeerRegistroMiembro(Mfn){'/
+'	self.location.href="fmt.php?login="+login+"&password="+password+"&Opcion=leer&from="+Mfn+"&Path='v8000'"+"&ver=N&base='v5001'&cipar='v5015'&marc='v2023'"'/
+'}'/
+
+'function AbrirVentanaInscripcion(){'/
+'	insWindow = window.open("", "Inscripcion", "location=no,width=700,height=550,scrollbars=yes,top=0,left=0");'/
+'	insWindow.focus()'/
+
+'}'/
+
+'function Prestar(){
+	alert(window.opener.document.title)
+}'/
+
+'function VentanaLogin(Mfn,Correo){'/
+'	loginWindow = window.open("", "Login", "location=no,width=390,height=210,scrollbars=auto")'/
+'	loginWindow.focus()'/
+'	loginWindow.document.close()'/
+'	loginWindow.document.write("<html>")'/
+'	loginWindow.document.write("<title>Convidemos. Noticias</title>")'/
+'	loginWindow.document.write("<body>")'/
+'	loginWindow.document.write("<form name=loginfrm method=post action=inscripcion.php target=Inscripcion onSubmit=Javascript:self.close()>")'/
+'   loginWindow.document.write("<input type=hidden name=Opcion value=login>")'/
+'   loginWindow.document.write("<input type=hidden name=mfn value="+Mfn+">")'/
+'   loginWindow.document.write("<input type=hidden name=base value='v5001'>")'/
+'   loginWindow.document.write("<input type=hidden name=cipar value='v5015'>")'/
+'   loginWindow.document.write("<input type=hidden name=Path value='v8000'>")'/
+'	loginWindow.document.write("<table>")'/
+'	loginWindow.document.write("<td colspan=3><font face=verdana size=1>Suministre sus datos de identificación</td>")'/
+'	loginWindow.document.write("<tr>")'/
+'	loginWindow.document.write("<td rowspan=2><img src='v8000'imagenes/logo.gif></td>")'/
+'	loginWindow.document.write("<td><font face=verdana size=1>e-mail</td>")'/
+'	loginWindow.document.write("<td><input type=text size=30 name=login value="+Correo+"></td>")'/
+'	loginWindow.document.write("<tr>")'/
+'	loginWindow.document.write("<td><font face=verdana size=1>password</td>")'/
+'	loginWindow.document.write("<td><input type=password size=15 name=password></td>")'/
+'	loginWindow.document.write("<tr>")'/
+'	loginWindow.document.write("<td></td><td align=center><br><input type=submit value=Enviar onClick=javascript:opener.AbrirVentanaInscripcion()></td>")'/
+'	loginWindow.document.write("</table>")'/
+'	loginWindow.document.write("</body>")'/
+'	loginWindow.document.write("</html>")'/
+'}'/
+'</script>'/
+'<body>'/ 
+'<center>'/
+
+'<span class=titulo1>'/
+select v5001
+	case 'escri':
+		'Escritores Venezolanos<p>'
+		
+endsel,
+'</span>'

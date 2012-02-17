@@ -1,0 +1,63 @@
+<?php
+// Open the Central module in a new window for avoiding the use of the browse buttons
+$open_new_window="Y";
+$context_menu="Y";
+
+//USED FOR ALL THE DATE FUNCTIONS. DD=DAYS, MM=MONTH, YY=YEAR. USE / AS SEPARATOR
+$config_date_format="DD/MM/YY";
+
+//Folder with the administration module
+$app_path="central";
+
+//Path to the databases
+$db_path="/ABCD/www/bases/";
+
+//Path to the folder where the uploaded images are to be stored (the database name will be added to this path)
+$img_path="/abcd/www/htdocs/bases/";
+
+//Path to the wwwisis executable (include the name of the program)
+$Wxis="/ABCD/www/cgi-bin/wxis.exe";
+
+//Path to the wxis scripts
+$xWxis="/ABCD/www/htdocs/$app_path/dataentry/wxis/";
+
+//default language
+$lang="en";
+
+//Default langue for the databases definition
+$lang_db="en";
+
+// use este lenguaje para seguir desplegando los registros con un código de página específico aunque cambie el lenguaje de diálogo
+//$display_lang="";
+
+//Url for the execution of WXis, when using GGI in place of exec
+$wxisUrl="";
+
+//$wxisUrl="http://localhost:9090/cgi-bin/wxis.exe";
+
+//Name of the institution
+$institution_name="BIREME - Centro Latino Americano e do Caribe de Informação em Ciências da Saúde";
+
+//Ruta hacia el archivo con la configuración del FCKeditor
+$FCKConfigurationsPath="/".$app_path."/dataentry/fckconfig.js";
+
+//Ruta hacia el FCKEditor
+$FCKEditorPath="/site/bvs-mod/FCKeditor/";
+
+//USE THIS LOGIN AND PASSWORD IN CASE OF CORRUPTION OF THE OPERATORS DATABASE OR IF YOU DELETED, BY ERROR, THE SYSTEM ADMINISTRATOR
+$adm_login="";
+$adm_password="";
+
+//Ruta hacia el archivo con la configuración del FCKeditor
+$FCKConfigurationsPath="/$app_path/dataentry/fckconfig.js";
+
+//USE THIS PARAMETER TO SHOW THE ICON THAT ALLOWS THE BASES FOLDER EXPLORATION   (0=don't show, 1=show)
+$dirtree=0;
+
+
+//USE THIS PARAMETER TO ENABLE/DISABLE THE MD5 PASSWORD ENCRIPTYON (0=OFF 1=ON)
+$MD5=0;
+
+$empwebservicequerylocation = "http://localhost:8086/ewengine/services/EmpwebQueryService";$empwebservicetranslocation = "http://localhost:8086/ewengine/services/EmpwebTransactionService";
+$empwebserviceobjectsdb = "objetos";$empwebserviceusersdb = "*";
+?>

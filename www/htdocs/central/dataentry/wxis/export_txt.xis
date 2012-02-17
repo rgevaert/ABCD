@@ -1,0 +1,138 @@
+ <IsisScript>
+	<trace>xOn</trace>
+	<section>
+		<field action=cgi tag=5001>base</field>
+		<field action=cgi tag=5015>cipar</field>
+		<field action=cgi tag=9001>Opcion</field>
+		<field action=cgi tag=9002>archivo</field>
+		<field action=cgi tag=3030>Formato</field>
+		<field action=cgi tag=3000>Expresion</field>
+		<field action=cgi tag=2000>Mfn</field>
+		<field action=cgi tag=2010>to</field>
+		<field action=cgi tag=4000>borrar</field>
+		<field action=cgi tag=4010>fullinv</field>
+		<field action=cgi tag=1>path_db</field>
+		<display><pft></pft></display>
+		<parm name=cipar>
+          	<pft>replace(s(cat(v5015)),'%path_database%',v1)/</pft>
+       	</parm>
+		<field action="replace" tag="5066"><pft>cat('STW')</pft></field>
+		<parm name=stw><pft>if p(v5066) then 'STW' fi</pft></parm>
+		<parm name=actab><pft>cat('isisac.tab')</pft></parm>
+		<parm name=uctab><pft>cat('isisuc.tab')</pft></parm>
+		<parm name="buffersize">200000</parm>
+
+		<flow action=jump>
+  			<pft>
+				select s(v9001)
+					case 'buscar':		 if a(v9002) then 'BUSCAR' else 'BUSCARISO' fi
+					case 'rango':        if a(v9002) then 'RANGO'  else 'RANGOISO' fi
+					case 'importar':     'IMPORTAR'
+				endsel
+			</pft>
+   		</flow>
+		<flow action=exit>1</flow>
+
+		<label>BUSCAR</label>
+		  <do task=search>
+		     <parm name=db><pft>v5001</pft></parm>
+		     <parm name=from><pft>'1'</pft></parm>
+		     <parm name=expression>
+		         <pft>
+		             v3000
+		         </pft>
+		     </parm>
+		     <loop>
+		     	<field action=import tag=3030>3030</field>
+		     	<display>
+					<pft type=reload><pft>v3030</pft></pft>
+				</display>
+			</loop>
+		</do>
+		<flow action=exit>1</flow>
+
+		<label>BUSCARISO</label>
+		  <do task=search>
+		     <parm name=db><pft>v5001</pft></parm>
+		     <parm name=from><pft>'1'</pft></parm>
+		     <parm name=expression>
+		         <pft>
+		             v3000
+		         </pft>
+		     </parm>
+		     <parm name=file><pft>v9002</pft></parm>
+		     <loop>
+		     	<display><pft>f(mfn,1,0)/</pft></display>
+		     	<export>this</export>
+			</loop>
+		</do>
+		<flow action=exit>1</flow>
+
+		<label>RANGO</label>
+			<do task=mfnrange>
+		   		<parm name=db><pft>v5001</pft></parm>
+		   		<parm name=from><pft>v2001</pft></parm>
+		   		<parm name=to><pft>v2010</pft></parm>
+				<loop>
+					<field action=import tag=3030>3030</field>
+					<field action=import tag=5001>5001</field>
+					<display><pft type=reload><pft>v3030</pft></pft></display>
+				</loop>
+			</do>
+		<flow action=exit>1</flow>
+
+		<label>RANGOISO</label>
+			<do task=mfnrange>
+		   		<parm name=db><pft>v5001</pft></parm>
+		   		<parm name=from><pft>v2001</pft></parm>
+		   		<parm name=to><pft>v2010</pft></parm>
+		   		<parm name=file><pft>v9002</pft></parm>
+		     	<loop>
+		     		<export>this</export>
+				</loop>
+			</do>
+		<flow action=exit>1</flow>
+
+
+    	<label>IMPORTAR</label>
+    		<flow action=jump>
+    			<pft>if v4000<>'true' then 'CONTINUAR' fi</pft>
+    		</flow>
+    		<file action=create type=database><pft>v5001</pft></file>
+			<display><pft>'[initok]<font color=red>'v5001'<font color=black>'/##</pft></display>
+    		<label>CONTINUAR</label>
+		    <do task="import">
+				<parm name=file><pft>v9002</pft></parm>
+				<field action=export tag=3000>5001</field>
+				<loop>
+					<field action=import tag=5001><pft>v5001</pft></field>
+					<field action=cgi tag=5001>base</field>
+					<field action=cgi tag=4010>fullinv</field>
+					<do task="update">
+						<parm name="db"><pft>v5001</pft></parm>
+						<parm name="fst"><pft>if v4010='true' then cat(v5001".fst") fi</pft></parm>
+		   				<parm name=mfn>GetNew</parm>
+		   				<field action="define" tag="1102">Isis_Status</field>
+						<update>
+		   					<write>Unlock</write>
+						</update>
+
+					</do>
+					<field action="statusdb" tag="1091"><pft>v5001</pft></field>
+					<display><pft>'[importado]'f(val(v1091^n)-1,1,0)/</pft></display>
+				</loop>
+			</do>
+			<field action="statusdb" tag="1091"><pft>v5001</pft></field>
+	<field action="replace" tag="1092">
+				<pft>
+
+					if p(v1091^n) then '<p>MAXMFN:',f(val(v1091^n) - 1,1,0)  fi/
+
+				</pft>
+	</field>
+	<display>
+		<pft>v1092/</pft>
+	</display>
+		<flow action=exit>1</flow>
+	</section>
+</IsisScript>

@@ -1,0 +1,10 @@
+License
+
+ABCD is an application of software released to the public according to the terms of the LGPLv3 license, taking into consideration the disclaimers to protect BIREME and other institutions participants on any liability regarding the access, development, distribution, use, merchantability and marketing related to the software; 
+
+ABCD reuses several other libraries and modules. These dependencies retain their original licenses. 
+
+For those interested in more information about the licensing, check http://www.opensource.org/licenses/alphabetical. 
+
+For a comparisom between software licenses, check http://en.wikipedia.org/wiki/Comparison_of_free_software_licences. 
+

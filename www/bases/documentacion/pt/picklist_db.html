@@ -1,0 +1,97 @@
+<p><font face="Arial"><font size="3"><strong>Captura de termos atrav&eacute;s de um arquivo de autoridades ou utilizando a
+terminologia j&aacute; ingressada na base de dados</strong></font></font></p>
+
+<p><font face="Arial"><font size="2">Com esta op&ccedil;&atilde;o pode-se capturar termos a partir de outra base de dados, por exemplo, uma base de dados de autoridades, ou a partir da mesma base de dados, para normalizar autores, descritores, editoras, etc.<br /></font></font></p>
+
+<p><font face="Arial"><font size="2">O acesso aos termos da base de dados associada &eacute; feito atrav&eacute;s do arquivo invertido.
+Consequentemente, requer a defini&ccedil;&atilde;o subdicion&aacute;rios no interior do dicion&aacute;rio de
+termos, com a atribui&ccedil;&atilde;o de prefixos aos campos indexados.<br />
+
+</font></font></p>
+
+<p><font face="Arial"><font size="2">Atrav&eacute;s do prefixo indicado na FDT se acessa aos postings das chaves obtendo o MFN do registro. Usa-se o MFN do primeiro posting da chave para acessar o registro e sobre o qual se aplica 2 formatos: <br /></font></font></p>
+
+<ul>
+
+    <li><strong><font size="2"><font face="Arial">formato de exibi&ccedil;&atilde;o</font></font></strong></li>
+
+    <li><font face="Arial"><font size="2"><strong>formato de extra&ccedil;&atilde;o</strong></font></font></li>
+
+</ul>
+
+<p><font size="2"><font face="Arial">O <strong>formato de exibi&ccedil;&atilde;o</strong> se aplica sobre o registro obtido atrav&eacute;s do posting, a fim de determinar a forma como ser&aacute; exibido o campo na lista de sele&ccedil;&atilde;o apresentada ao usu&aacute;rio, enquanto que o <strong>formato de extra&ccedil;&atilde;o</strong> se utiliza para extrair o campo e
+transferi-lo para o registro. A lista &eacute; constru&iacute;da com o elemento &lt;select&gt; da linguagem HTML e as op&ccedil;&otilde;es do
+menu de sele&ccedil;&atilde;o s&atilde;o preenchidas da seguinte maneira:<br />
+
+&lt;option value="</font></font><font face="Arial"><font size="2"><strong>formato de extra&ccedil;&atilde;o</strong>"&gt;</font></font><strong><font size="2"><font face="Arial">formato de exibi&ccedil;&atilde;o</font></font></strong><font size="2"><font face="Arial">&lt;/option&gt;</font></font></p>
+
+<p><font face="arial" size="2">Ent&atilde;o, quando o usu&aacute;rio clicar sobre um termo, a cadeia associada
+com o <strong>formato de extra&ccedil;&atilde;o</strong> &eacute; transferida para o registro</font><br />
+
+<font size="2"><font face="Arial"><br />
+
+Os formatos mencionados podem ter toda a complexidade da linguagem de formata&ccedil;&atilde;o do
+CDS/ISIS. Para formatos muito complicados recomenda-se colocar como formato de extra&ccedil;&atilde;o um formato (PFT) previamente criado, utilizando a forma @xxxxxx.pft para incorporar o formato onde seja requerido. Neste caso, o formato de extra&ccedil;&atilde;o e o formato de exibi&ccedil;&atilde;o s&atilde;o inclu&iacute;dos no formato @xxxxxx.pft, separados
+com $$$. Deve-se utilizar o comando <strong>select</strong> da linguagem de formata&ccedil;&atilde;o para aplicar o formato de acordo com a ID do campo recuperado no arquivo invertido.<br />
+
+<br />
+
+Exemplo:<br />
+
+</font></font></p>
+
+<p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2"><font face="Courier New">select e3<br />
+
+&nbsp; case 1: v1<br />
+
+&nbsp; case 100: v100^a,`$$$`v100^a<br />
+
+&nbsp; case 600: v600^a,`$$$`v600^a<br />
+
+&nbsp; case 700: v700^a,`$$$`v700^a</font></font><font face="Arial"><font face="Courier New"><br />
+
+<font size="2">&nbsp; case 110: v110^a,`$$$`v110<br />
+
+&nbsp; case 111: v111^a,`$$$`v111<br />
+
+&nbsp; case 245: v245^a,`$$$`f(mfn,1,0)<br />
+
+&nbsp; case 260: v260^a," : "v260^b,</font></font></font><font face="Arial"><font face="Courier New" size="2">`$$$`v260</font></font><br />
+
+<font face="Arial" size="2"><font face="Courier New">&nbsp; case 270: v270<br />
+
+&nbsp; case 340: v340<br />
+
+...<br />
+
+<br />
+
+...<br />
+
+<br />
+
+endsel</font></font></p>
+
+<p><font face="Arial" size="2">A vari&aacute;vel associada a case, identifica o Id
+assinalado ao campo na FST; em seguida especifica o formato a utilizar para a exibi&ccedil;&atilde;o do campo na lista de sele&ccedil;&atilde;o e, em seguida, precedido por `$$$`, o formato a utilizar para exibir o campo e
+transferi-lo &agrave; tela de entrada. Se o formato de extra&ccedil;&atilde;o for omitido, ser&aacute; usado o formato de exibi&ccedil;&atilde;o como formato de extra&ccedil;&atilde;o.</font></p>
+
+<p><font face="Arial" size="2">O ID do campo &eacute; obtido atrav&eacute;s do posting obtido com o prefixo. Por esta raz&atilde;o, &eacute; poss&iacute;vel exibir uma lista de sele&ccedil;&atilde;o que contemple v&aacute;rios campos, por exemplo, todos os autores pessoais do formato Marc (100,600,700).</font></p>
+
+<p><font face="Arial" size="2">Neste caso, todos os campos ser&atilde;o indexados com o mesmo prefixo, por&eacute;m o ID deve coincidir com a tag do campo para que extraia corretamente da base de dados, ao aplicar o formato de extra&ccedil;&atilde;o correspondente</font></p>
+
+<p><font face="Arial" size="2">Por exemplo, para exibir todos os autores do formato MARC, de acordo com o formato de extra&ccedil;&atilde;o mostrado anteriormente (@xxxxx.pft) a FST para indexa&ccedil;&atilde;o dever&aacute; especificar:</font></p>
+
+<p><font face="Arial" size="2">100 0 "AU_"v100^a/<br />
+
+<font face="Arial" size="2">600 0 (| AU_| v600^a|%|/)<br />
+
+<font face="Arial" size="2">700 0 (| AU_| v700^a|%|/)</font></font></font></p>
+
+<p><font face="Arial" size="2">Note a utiliza&ccedil;&atilde;o do % no caso de campos repetitivos para gerar o n&uacute;mero da ocorr&ecirc;ncia, visto que a exibi&ccedil;&atilde;o das listas usa o componente do posting que identifica o n&uacute;mero da ocorr&ecirc;ncia para extrair corretamente o campo.</font></p>
+
+<br />
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>

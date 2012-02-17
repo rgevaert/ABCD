@@ -1,0 +1,104 @@
+<p><font face="Arial"><font size="3"><strong>Editar o arquivo DBN.def para configurar uma base de dados
+para o iAH</strong>&nbsp;</font></font></p>
+
+<p><font face="Arial" size="2">Esta p&aacute;gina de configura&ccedil;&atilde;o consta de 4 se&ccedil;&otilde;es necess&aacute;rias para
+configurar uma base de dados no iAH:</font></p>
+
+<ul>
+
+    <li><font face="Arial"><font size="2"><strong>FILE_LOCATION</strong> </font></font></li>
+
+    <li><font face="Arial"><font size="2"><strong>INDEX_DEFINITON</strong> </font></font></li>
+
+    <li><font face="Arial"><font size="2"><strong>APPLY_GIZMO</strong> </font></font></li>
+
+    <li><font face="Arial"><font size="2"><strong>FORMAT_NAME</strong> </font></font></li>
+
+    <li><font face="Arial"><font size="2"><strong>HELP_FORM</strong> </font></font></li>
+
+    <li><font face="Arial"><font size="2"><strong>PREFERENCES</strong> </font></font></li>
+
+</ul>
+
+<p><font face="Arial" size="2">Para informa&ccedil;&atilde;o espec&iacute;fica relativa &agrave;s
+se&ccedil;&otilde;es dever&aacute; ser consultado o <strong>Manual do Usu&aacute;rio do iAH</strong>. Nesta p&aacute;gina apenas
+&eacute; fornecida uma ajuda sobre a forma de utilizar a ferramenta de configura&ccedil;&atilde;o prevista no ABCD e n&atilde;o sobre o conte&uacute;do dessas
+se&ccedil;&otilde;es.</font></p>
+
+<p><font face="Arial" size="2">Para editar o arquivo de configura&ccedil;&atilde;o s&atilde;o possíveis 2 op&ccedil;&otilde;es:</font></p>
+
+<ol>
+
+    <li><font face="Arial" size="2">Usar um editor TXT para modificar
+      diretamente o arquivo de configura&ccedil;&atilde;o. Para tal clicar sobre a liga&ccedil;&atilde;o <strong>Editar no formato TXT </strong>que &eacute; apresentado no in&iacute;cio da p&aacute;gina. </font></li>
+
+    <li><font face="Arial" size="2">Usar o assistente fornecido pelo ABCD para facilitar o preenchimento das
+      se&ccedil;&otilde;es. </font></li>
+
+</ol>
+
+<p><font face="Arial" size="2">O assistente est&aacute; dividido nas 6 se&ccedil;&otilde;es exigidas. Cada uma
+possui no final um link <strong>Adicionar</strong>&nbsp; para permitir adicionar um novo elemento da
+se&ccedil;&atilde;o em altera&ccedil;&atilde;o.</font></p>
+
+<p><font face="Arial" size="2">A se&ccedil;&atilde;o&nbsp; <strong>INDEX_DEFINITON </strong>permite editar cada linha com vista a facilitar o preenchimento da informa&ccedil;&atilde;o. Para tal clicar sobre
+<strong>editar</strong> que acompanha a defini&ccedil;&atilde;o de cada &iacute;ndice e no formul&aacute;rio apresentado
+e forne&ccedil;a a informa&ccedil;&atilde;o correspondente. Uma vez preenchido o formul&aacute;rio clicar sobre <strong>Aceitar </strong>para transferir as caixas da linha correspondente da
+se&ccedil;&atilde;o <strong>INDEX_DEFINITION</strong>.</font></p>
+
+<p><font face="Arial" size="2">A se&ccedil;&atilde;o <strong>FORMAT_NAME</strong>&nbsp; facilita o acesso ao editor dos formatos de descri&ccedil;&atilde;o (PFT`s) do ABCD para que seja
+poss&iacute;vel criar ou alterar o formato correspondente.&nbsp; Este acesso &eacute; feito atrav&eacute;s
+do link <strong>Criar/editar formato</strong>  inclu&iacute;do no inicio da se&ccedil;&atilde;o. Se tiver criado um novo formato, dever&aacute; adicionar o mesmo &agrave;
+se&ccedil;&atilde;o, preenchendo as caixas que s&atilde;o apresentadas depois de clicar em <strong>Adicionar</strong>.</font></p>
+
+<p><font face="Arial" size="2">Uma vez preenchida toda a informa&ccedil;&atilde;o no formul&aacute;rio, clicar sobre <strong>Validar</strong> para verificar a consist&ecirc;ncia da informa&ccedil;&atilde;o fornecida e depois sobre <strong>Atualizar</strong> para guardar o
+arquivo criado.</font></p>
+
+<p><font face="Arial" size="2">Os crit&eacute;rios de valida&ccedil;&atilde;o utilizados s&atilde;o os seguintes:</font></p>
+
+<p><strong><font face="Arial" size="2">FILE_LOCATION</font></strong></p>
+
+<ol>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que todos os nomes l&oacute;gicos est&atilde;o precedidos pelo literal <strong>FILE</strong>. Em caso de falta deste literal o mesmo ser&aacute; adicionado.</font></li>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que todos os caminhos est&atilde;o precedidos pelo literal %path_database%. Em caso de falta deste literal o mesmo ser&aacute; adicionado.</font></li>
+
+</ol>
+
+<p><font face="Arial" size="2"><strong>INDEX_DEFINITION</strong></font></p>
+
+<ol>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que todos os nomes l&oacute;gicos est&atilde;o precedidos pelo literal <strong>INDEX</strong>. Em caso de falta deste literal o mesmo ser&aacute; adicionado.</font></li>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que est&aacute; presente pelo menos um sub-campo com o nome do &iacute;ndice</font></li>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que os nomes l&oacute;gicos das bases de dados de &iacute;ndices (^y) tenham uma entrada correspondente na se&ccedil;&atilde;o <strong>FILE_LOCATION</strong></font></li>
+
+</ol>
+
+<p><strong><font face="Arial" size="2">APPLY_GIZMO</font></strong></p>
+
+<ol>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que os nomes dos gizmo's fornecidos tenham uma entrada correspondentes na se&ccedil;&atilde;o <strong>FILE_LOCATION</strong></font></li>
+
+</ol>
+
+<p><strong><font face="Arial" size="2">PREFERENCES</font></strong></p>
+
+<ol>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que est&aacute; ativado pelo menos um
+      formul&aacute;rio de pesquisa.</font></li>
+
+    <li><font face="Arial" size="2">Verifica&ccedil;&atilde;o de que o n&uacute;mero de documentos por p&aacute;gina &eacute; um valor num&eacute;rico</font></li>
+
+</ol>
+
+<p>&nbsp;</p>
+
+<p><font face="Arial" size="2"></font></p>
+
+<p>&nbsp;</p>

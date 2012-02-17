@@ -1,0 +1,29 @@
+3006 3007
+VM_g_NL.fmt|g|m|Material projetável - Nac.
+VM_g_ML.fmt|g|m|Material projetável - Min.
+VM_k_NL.fmt|k|m|Gráfico não projet. bidimens. - Nac.
+VM_k_ML.fmt|k|m|Gráfico não projet. bidimens. - Min.
+VM_o_NL.fmt|o|m|Kit (dois ou mais tipos) - Nac.
+VM_o_ML.fmt|o|m|Kit (dois ou mais tipos) - Min.
+VM_r_NL.fmt|r|m|Objeto tridimensional - Nac.
+VM_r_ML.fmt|r|m|Objeto tridimensional - Min.
+VM_p_ML.fmt|p|m|Material misto - Min.
+VM_p_NL.fmt|p|m|Material misto - Nac.
+BK_a_NL.fmt|a|m|Material textual - Nac.
+BK_a_ML.fmt|a|m|Material textual - Min.
+AM_t_NL.fmt|t|m|Mat. textual manuscrito - Nac.
+AM_t_ML.fmt|t|m|Mat. textual manuscrito - Min.
+CF_m_NL.fmt|m|m|Arquivo de Computador - Nac.
+CF_m_ML.fmt|m|m|Arquivo de Computador - Min.
+MP_e_NL.fmt|e|m|Material cartográfico - Nac.
+MP_e_ML.fmt|e|m|Material cartográfico - Min.
+MP_f_NL.fmt|f|m|Mat. cartogr. manuscrito - Nac.
+MP_f_ML.fmt|f|m|Mat. cartogr. manuscrito - Min.
+MU_c_NL.fmt|c|m|Música impressa – Nac.
+MU_c_ML.fmt|c|m|Música impressa – Min.
+MU_d_NL.fmt|d|m|Música manuscrita – Nac.
+MU_d_ML.fmt|d|m|Música manuscrita – Min.
+MU_i_NL.fmt|i|m|Gravação de som não musical – Nac.
+MU_i_ML.fmt|i|m|Gravação de som não musical – Min.
+MU_j_NL.fmt|j|m|Gravação de som musical – Nac.
+MU_j_ML.fmt|j|m|Gravação de som musical – Min.

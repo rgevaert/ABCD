@@ -1,0 +1,28 @@
+BK_a_ML|Document textuel  – Min.
+BK_a_NL|Document textuel  – Nat.|ALL
+MU_c_NL|Notation musicale – Nat.|ALL
+MU_c_ML|Notation musicale – Min.|
+MU_d_NL|Notation musicale manuscrite – Nat.|
+MU_d_ML|Notation musicale manuscrite – Min.|
+MU_i_ML|Enregistrement sonore non musical – Min.|
+MU_i_NL|Enregistrement sonore non musical – Nat.|
+MU_j_ML|Enregistrement sonore musical – Min.|
+MU_j_NL|Enregistrement sonore musical – Nat.|
+MP_e_ML|Document cartographique – Min.|
+MP_e_NL|Document cartographique – Nat.|
+MP_f_ML|Document cartographique manuscrit – Min.|
+MP_f_NL|Document cartographique manuscrit – Nat.|
+VM_k_NL|Document iconique 2D non projeté – Nat.|
+VM_k_ML|Document iconique 2D non projeté – Min.|
+VM_o_ML|Ensemble multi-supports – Min.|
+VM_o_NL|Ensemble multi-supports – Nat.|
+VM_p_ML|Documents de genres multiples – Min.|
+VM_p_NL|Documents de genres multiples – Nat.|
+VM_r_ML|Artefact 3D ou objet naturel – Min.|
+VM_r_NL|Artefact 3D ou objet naturel – Nat.|
+VM_g_ML|Matériel visionné par projection – Min.|
+VM_g_NL|Matériel visionné par projection – Nat.|
+AM_t_ML|Document textuel manuscrit – Min.|
+AM_t_NL|Document textuel manuscrit – Nat.|
+CF_m_ML|Fichier d\'ordinateur – Min.|
+CF_m_NL|Fichier d\'ordinateur – Nat.|

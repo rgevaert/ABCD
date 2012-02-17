@@ -1,0 +1,29 @@
+3006 3007
+BK_a_ML.fmt|a|m|Document textuel
+BK_a_NL.fmt|a|m|Document textuel
+MU_c_NL.fmt|c|m|Notation musicale
+MU_c_ML.fmt|c|m|Notation musicale
+MU_d_NL.fmt|d|m|Notation musicale manuscrite
+MU_d_ML.fmt|d|m|Notation musicale manuscrite
+MP_e_ML.fmt|e|m|Document cartographique
+MP_e_NL.fmt|e|m|Document cartographique
+MP_f_ML.fmt|f|m|Document cartographique manuscrit
+MP_f_NL.fmt|f|m|Document cartographique manuscrit
+VM_g_ML.fmt|g|m|Matériel visionné par projection
+VM_g_NL.fmt|g|m|Matériel visionné par projection
+MU_i_ML.fmt|i|m|Enregistrement sonore non musical
+MU_i_NL.fmt|i|m|Enregistrement sonore non musical
+MU_j_ML.fmt|j|m|Enregistrement sonore musical
+MU_j_NL.fmt|j|m|Enregistrement sonore musical
+VM_k_NL.fmt|k|m|Document iconique 2D non projeté
+VM_k_ML.fmt|k|m|Document iconique 2D non projeté
+CF_m_ML.fmt|m|m|Fichier d\'ordinateur
+CF_m_NL.fmt|m|m|Fichier d\'ordinateur
+VM_o_ML.fmt|o|m|Ensemble multi-supports
+VM_o_NL.fmt|o|m|Ensemble multi-supports
+VM_p_ML.fmt|p|m|Documents de genres multiples
+VM_p_NL.fmt|p|m|Documents de genres multiples
+VM_r_ML.fmt|r|m|Artefact 3D ou objet naturel
+VM_r_NL.fmt|r|m|Artefact 3D ou objet naturel
+AM_t_ML.fmt|t|m|Document textuel manuscrit
+AM_t_NL.fmt|t|m|Document textuel manuscrit

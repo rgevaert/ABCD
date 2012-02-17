@@ -1,0 +1,20 @@
+M|8|Campo Fijo (08)|0|0||||||||||||1|
+S||00-05 Fecha de ingreso|0|0|||X||6|||||||0|
+S||06-06 Tipo Fech/Est.Pub|0|0|||X||1|||||||0|
+S||07-10 Fecha 1|0|0|||X||4|||||||0|
+S||11-14 Fecha 2|0|0|||X||4|||||||0|
+S||15-17 Lugar pub/prod/ejec|0|0|||X||3|P|0815.tab|||||0|
+S||18-20 Tiempo de ejecución|0|0|||X||3|P|vm_18-20.tab|||||0|
+S||21-21 No use|0|0|||X||1|||||||0|
+S||22-22 Audiencia|0|0|||X||1|P|bk_22.tab|||||0|
+S||23-27 No use|0|0|||X||5|||||||0|
+S||28-28 Public.Oficial|0|0|||X||1|P|bk_28.tab|||||0|
+S||29-29 Conferencia|0|0|||X||1|P|0829.tab|||||0|
+S||30-32 No use|0|0|||X||3|||||||0|
+S||33-33 Tipo|0|0|||X||1|P|vm_33.tab|||||0|
+S||34-34 Técnica|0|0|||X||1|P|vm_34.tab|||||0|
+S||35-37 Idioma|0|0|||X||3|P|0835.tab|||||0|
+S||38-38 Modific.registro|0|0|||X||1|P|0838.tab|||||0|
+S||39-39 Fuente catalogación|0|0|||X||1|P|0839.tab|||||0|
+
+

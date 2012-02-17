@@ -1,0 +1,12 @@
+10:if a(v10) then 'Nom et prénom absents' fi
+$$|$$true
+###
+20:if a(v20) then 'Nom utilisateur absent' fi
+$$|$$true
+###
+30:if a(v30) then 'Mot de passe absent' fi
+$$|$$true
+###
+40:if a(v40) then 'Groupe absent' fi
+$$|$$true
+###

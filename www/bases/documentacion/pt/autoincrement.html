@@ -1,0 +1,24 @@
+<p style="background-color: rgb(204, 204, 204);"><font size="3" face="Arial">Geração automática do número de controle dos registros de uma base de dados</font></p>
+<br />
+</strong>Esta opção permite atribuir de forma automática um número sequencial consecutivo aos registros de uma base de dados.<br />
+<br />
+Na FDT, defina o campo de controle como tipo de campo <strong>Autoincrementar</strong>. Na definição do campo inclua o prefixo <strong>CN_</strong> com o qual o dado deve ser indexado no arquivo invertido e nos formatos de exibição e extração correspondentes.<br />
+<br />
+A numeração está no arquivo <strong>control_number.cn</strong>, armazenado na pasta <strong>data</strong> da base de dados correspondente. Neste arquivo é armazenado o último número atribuído no processo de entrada de dados.</p>
+<p>O número de controle não pode ser inserido diretamente, no formulário de entrada
+de dados. A atribuição do número pode ser feita por um dos seguintes métodos:</p>
+<ol>
+    <li>Se deixar o campo em branco, no momento de armazenar o registro, é
+      determinado o próximo número a ser atribuído e o mesmo é gravado no campo correspondente</li>
+    <li>Para atribuir um número de controle diretamente no registro, executar os seguintes procedimentos:
+    <ul>
+        <li>Clique no link <strong>Atribuir</strong> que é exibido ao lado do campo <strong>Número de controle</strong></li>
+        <li>É exibida uma nova janela para que se digite o novo número a ser atribuído</li>
+        <li>Clique em <strong>Enviar</strong> para verificar se o novo número de controle não existe </li>
+        <li>Se o número de controle ainda não existe, o valor é inserido no campo</li>
+        <li>Se o número de controle já existe na base, na mesma janela é exibido o registro do documento que tem o número. Clique em <strong>Voltar</strong> para atribuir outro número ou em <strong>Fechar</strong> para fechar a janela</li>
+    </ul>
+    </li>
+    <li>Para deixar o campo de número de controle em branco, clique em <strong>Atribuir</strong> e na janela aberta, deixe a caixa do número em branco, e em seguida clique em <strong>Enviar</strong>.</li>
+</ol>
+<p>&nbsp;</p>

@@ -1,0 +1,16 @@
+<p><font face="Arial" size="3"><strong>Selecionar Base de Dados</strong></font></p>
+<p><font face="Arial" size="2">Quando uma base de dados &eacute; selecionada, &eacute; informado o n&uacute;mero total de registros que ela tem. Tamb&eacute;m haver&aacute; uma advert&ecirc;ncia se base de dados estiver bloqueada.</p>
+<p>Se a base de dados estiver bloqueada, n&atilde;o pode ser acessada por nenhum operador at&eacute; que o Administrador de Base de Dados fa&ccedil;a o desbloqueio.</p>
+<p>Para bloquear uma base de dados use a op&ccedil;&atilde;o <strong>Utilit&aacute;rios-&gt;Bloquear Base de Dados </strong>do menu principal do <strong>ABCD.</strong></p>
+<p>Somente o Administrador do Sistema ou o Administrador da Base de dados podem bloquear ou desbloquear bases de dados.</p>
+<p>Outra causa de bloqueio de base de dados &eacute; produzida quando &eacute; gerada uma condi&ccedil;&atilde;o de erro ao manipul&aacute;-la, por exemplo, um processo de gera&ccedil;&atilde;o de arquivo invertido n&atilde;o finalizado, ou erro na FST quando se tenta atualizar um registro. Esta situa&ccedil;&atilde;o tamb&eacute;m ocorre no momento de abrir a base de dados. Neste caso, como o
+bloqueio foi for&ccedil;ado por um Administrador,&nbsp; deve-se primeiro desbloquear a base de dados e desbloquear os registros atrav&eacute;s &nbsp;do menu de utilit&aacute;rios associado ao bot&atilde;o <strong>Utilit&aacute;rios</strong> da barra de ferramentas do procedimento de cataloga&ccedil;&atilde;o.</p>
+<p>O bloqueio de registros &eacute; realizado comumente dentro do procedimento de entrada de dados como parte do mecanismo de prote&ccedil;&atilde;o da atualiza&ccedil;&atilde;o dos dados. Isto &eacute;: quando um usu&aacute;rio edita um registro, este &eacute; bloqueado para que n&atilde;o possa ser modificado simultaneamente por outro usu&aacute;rio. Quando o registro &eacute; atualizado, &eacute; desbloqueado,  e volta a estar dispon&iacute;vel para os outros usu&aacute;rios.</p>
+<p>Se o ciclo de atualiza&ccedil;&atilde;o n&atilde;o &eacute; finalizado, isto &eacute;, o registro n&atilde;o &eacute; salvo ou n&atilde;o se cancela a atualiza&ccedil;&atilde;o (bot&otilde;es salvar ou cancelar da barra de ferramentas), o registro permanece bloqueado por um tempo (4 horas) para os outros usu&aacute;rios.</p>
+<p>Existem duas formas para desbloqueio antes do prazo mencionado:</p>
+<ol>
+    <li>Se o mesmo operador que bloqueou o registro, solicita de novo sua edi&ccedil;&atilde;o, ent&atilde;o, ele pode atualizar o registro, ou seja, pode atualizar ou cancelar a edi&ccedil;&atilde;o para liberar o registro</li>
+    <li>Outra forma de desbloquear os registros &eacute; utilizando a op&ccedil;&atilde;o <strong>Desbloquear registros</strong> do menu <strong>Utilit&aacute;rios </strong>da barra de ferramentas. Somente o Administrador do Sistema ou Administrador da Base de Dados tem acesso a esta op&ccedil;&atilde;o.</li>
+</ol>
+</font>
+<p>&nbsp;</p>

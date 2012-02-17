@@ -1,0 +1,4 @@
+20:if a(v20) then 'falta el campo 20' fi
+510:"Falta el campo 510"n510
+900:if a(v900) then 'falta el campo 900' fi
+440:if p(v440) then 'use el campo 490' fi

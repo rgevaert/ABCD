@@ -1,0 +1,40 @@
+<!-- saved from url=(0022)http://internet.e-mail -->
+<font face="Arial" size="3"><strong>Copiar registros a partir de servidores remotos utilizando o protocolo Z39.50.</strong></font><br />
+<br />
+Esta op&ccedil;&atilde;o do ABCD permite catalogar de forma direta registros provenientes de outras fontes dispon&iacute;veis atrav&eacute;s do protocolo Z39.50.<br />
+<br />
+<font face="Arial" size="2">
+No menu&nbsp; <strong>Conectar a:&nbsp; </strong>&eacute; apresentada a lista de servidores que est&atilde;o dispon&iacute;veis para a localiza&ccedil;&atilde;o de bases de dados. Esta lista &eacute; mantida atrav&eacute;s da op&ccedil;&atilde;o <strong>Configurar cliente Z39.50 </strong>dispon&iacute;vel (para o administrador) no menu principal do ABCD.<br />
+<br />
+O menu <strong>Tabela de convers&atilde;o </strong>cont&eacute;m os esquemas que foram definidos para converter os registros a partir do formato MARC&nbsp;para a defini&ccedil;&atilde;o de campos da base local que vai receber a informa&ccedil;&atilde;o. Esta lista &eacute; mantida atrav&eacute;s da op&ccedil;&atilde;o <strong>Configurar cliente Z39.50 </strong>dispon&iacute;vel (para o administrador) no menu principal do ABCD. Se n&atilde;o for selecionado nenhum esquema de convers&atilde;o, &eacute; utilizada a FDT da base de
+dados local para determinar os campos que ser&atilde;o copiados a partir da base de dados remota.<br />
+<br />
+Utilize as op&ccedil;&otilde;es de pesquisa para estabelecer os crit&eacute;rios a serem aplicados para localizar a informa&ccedil;&atilde;o que deseja catalogar.<br />
+<br />
+Na caixa <strong>Mostrar </strong>indique quantos registros devem ser usados para configurar as p&aacute;ginas com os resultados obtidos<br />
+<strong><br />
+Tentar a conex&atilde;o xx vezes </strong>estabelece quantas vezes o sistema tentar&aacute;
+estabelecer uma conex&atilde;o no caso de o servidor n&atilde;o puder ser localizado.<br />
+<br />
+Em condi&ccedil;&otilde;es normais, os registros transferidos criam novos registros na base de dados local que recebe a informa&ccedil;&atilde;o.&nbsp; Para transferir a informa&ccedil;&atilde;o a um registro j&aacute; existente siga o
+seguinte procedimento:<br />
+<br />
+<ol>
+    <li>Localize na base local o registro j&aacute; existente que pretende preencher/completar com dados da cataloga&ccedil;&atilde;o Z39.50. <br />
+    </li>
+    <li>Depois de ter encontrado o registro, clique no bot&atilde;o <strong>editar</strong> na barra de ferramentas.&nbsp;</li>
+    <li>Quando &eacute; exibido o formato para a edi&ccedil;&atilde;o do registro, clique no bot&atilde;o que chama o cliente
+      Z39.50 que fica na barra de ferramentas do registro. Se fez altera&ccedil;&otilde;es no registro, deve salv&aacute;-lo antes de chamar o cliente cataloga&ccedil;&atilde;o Z39.50 j&aacute; que de outra forma as altera&ccedil;&otilde;es realizadas ser&atilde;o perdidas</li>
+    <li>Selecione a base de dados a partir da qual ir&aacute; catalogar, o formato de convers&atilde;o (se necess&aacute;rio) e fa&ccedil;a a busca</li>
+    <li>Localize o registro que deseja capturar nos resultados apresentados.</li>
+    <li>Clique no &iacute;cone de captura que fica no canto esquerdo superior do registro. As informa&ccedil;&otilde;es obtidas a partir do servidor Z39.50 s&atilde;o copiadas para o
+      registro selecionado:
+    <ul>
+        <li>Convertendo os dados aplicando o formato de convers&atilde;o (se houver)</li>
+        <li>Transferindo os dados para os campos da base de dados local, <strong>sempre e quando estes estiverem vazios</strong>, ou seja, esta a&ccedil;&atilde;o de c&oacute;pia n&atilde;o substitui as informa&ccedil;&otilde;es existentes no
+          registro</li>
+    </ul>
+    </li>
+    <li>Salve o registro da base de dados local</li>
+</ol>
+</font>

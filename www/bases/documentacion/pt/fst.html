@@ -1,0 +1,1109 @@
+
+<table cellspacing="0" cellpadding="0" width="95%" border="0">
+
+    <tbody>
+
+        <tr>
+
+            <td><strong><font face="Arial" size="2">A TABELA DE EXTRAÇÃO DE CAMPOS</font></strong>
+            <p align="justify"><font face="Arial" size="2">A tabela de extra&ccedil;&atilde;o de campos &eacute; um arquivo utilizado pelo CDS/ISIS para atualiza&ccedil;&atilde;o do arquivo invertido (&iacute;ndice), para pesquisa e reformata&ccedil;&atilde;o de estruturas de dados na convers&atilde;o de informa&ccedil;&otilde;es e ainda para a cria&ccedil;&atilde;o de chaves de ordena&ccedil;&atilde;o alfab&eacute;tica de relat&oacute;rios.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">A constru&ccedil;&atilde;o da tabela de extra&ccedil;&atilde;o implica que se tenha em conta, sempre que poss&iacute;vel, os tipos de pesquisa pretendidos e a forma de consulta da base de dados com vista a obter resultados precisos e pertinentes.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">O CDS/ISIS disponibiliza um grande n&uacute;mero de funcionalidades para garantir o &ecirc;xito dos processos de recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, como sejam: </font></p>
+
+            <ul>
+
+                <li><font face="Arial" size="2">8 t&eacute;cnicas de indexa&ccedil;&atilde;o diferentes, de tal forma que um mesmo campo pode originar diferentes entradas nos &iacute;ndices </font></li>
+
+                <li><font face="Arial" size="2">A extra&ccedil;&atilde;o das chaves &eacute; feita atrav&eacute;s de uma linguagem de formata&ccedil;&atilde;o, o que permite analisar e realizar transforma&ccedil;&otilde;es sobre os dados dos campos antes de gerar a entrada nos &iacute;ndices. </font></li>
+
+                <li><font face="Arial" size="2">Transpar&ecirc;ncia no uso de mai&uacute;sculas, min&uacute;sculas ou caracteres acentuados dos termos usados na pesquisa </font></li>
+
+                <li><font face="Arial" size="2">Identifica&ccedil;&atilde;o precisa de cada chave do ind&iacute;ce, o que facilita determinar a sua origem (mfn, campo, ocorr&ecirc;ncia e posi&ccedil;&atilde;o relativa dentro do campo) e a utiliza&ccedil;&atilde;o de operadores posicionais de pesquisa.</font></li>
+
+            </ul>
+
+            <p align="justify"><font face="Arial" size="2">A tabela de extra&ccedil;&atilde;o de campos &eacute; um arquivo do tipo TXT o qual &eacute; composto por tr&ecirc;s colunas onde se identificam os seguintes elementos:</font>
+
+            <table class="td" cellspacing="5" cellpadding="5" width="80%" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td colspan="2"><strong><font face="Arial" size="2">ID &nbsp; TI &nbsp; Formato de extra&ccedil;&atilde;o</font></strong></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td class="td" valign="top"><font face="Arial" size="2">ID = Identifica&ccedil;&atilde;o da chave</font></td>
+
+                        <td><font face="Arial" size="2">Identifica a etiqueta (tag) do campo que se utilizar&aacute; para qualificar a pesquisa. As chaves definidas em cada linha ter&atilde;o, no arquivo invertido, a identifica&ccedil;&atilde;o que for especificada nesta coluna<br />
+
+                        </font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">TI = T&eacute;cnica de indexa&ccedil;&atilde;o</font></td>
+
+                        <td><font face="Arial" size="2">Especifica a t&eacute;cnica de indexa&ccedil;&atilde;o a aplicar sobre o resultados das linhas obtidas com a execu&ccedil;&atilde;o do formato de extra&ccedil;&atilde;o sobre um registro da base de dados<br />
+
+                        </font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">Formato de extra&ccedil;&atilde;o</font></td>
+
+                        <td><font face="Arial" size="2">Especifica o formato de extra&ccedil;&atilde;o que ser&aacute; aplicado sobre a base de dados<br />
+
+                        </font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+             <p align="justify"><font face="Arial" size="2">O arquivo invertido que cont&eacute;m os &iacute;ndices do CDS/ISIS consta de cinco elementos: </font></p>
+
+            <dir><dd><font face="Arial" size="2">Termo de pesquisa (chave)<br />
+
+            </font></dd><dd><font face="Arial" size="2">Id<br />
+
+            </font></dd><dd><font face="Arial" size="2">Mfn<br />
+
+            </font></dd><dd><font face="Arial" size="2">N&uacute;mero de Ocrr&ecirc;ncia<br />
+
+            </font></dd><dd><font face="Arial" size="2">N&uacute;mero de sequ&ecirc;ncia </font></dd></dir>
+
+            <p align="justify"><font face="Arial" size="2">O valor indicado na coluna 1 da FST gera a componente ID do arquivo invertido, a qual atribui uma identifica&ccedil;&atilde;o a cada uma das chaves geradas pelo formato de extra&ccedil;&atilde;o. Esta identifica&ccedil;&atilde;o poder&aacute; ser utilizada posteriormente, para qualificar as pesquisas que sejam feitas sobre a base de dados. Geralmente &eacute; utilizada como ID a mesma etiqueta (tag) que &eacute; indicada na tabela de defini&ccedil;&atilde;o de campos, mas em alguns casos pode-se optar por uma etiqueta com outro valor para obter uma forma diferente de indexa&ccedil;&atilde;o.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">Por exemplo: consideremos que a base de dados cont&eacute;m 3 campos para a entrada de autores:</font></p>
+
+            <p align="justify"><font face="Arial" size="2">10: Autor-pessoa a n&iacute;vel anal&iacute;tico<br />
+
+            16: Autor-pessoa de monografia<br />
+
+            23: Autor-pessoa a n&iacute;vel de cole&ccedil;&atilde;o<br />
+
+            </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Para efeitos de pesquisa todos os autores devem ser considerados de forma id&ecirc;ntica, independentemente do tipo de documento onde aparecem referidos. Ent&atilde;o, iremos atribuir na FST um ID 10 para todas as chaves que sejam criadas a partir dos campos 10, 16 e 23 com o objetivo de efetuar a pesquisa por autor, qualquer que seja o tipo de documento.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">Portanto, se a FST especifica:</font></p>
+
+            <p align="justify"><font face="Courier New">10 0 (v10/)(v16/)(v23/)</font></p>
+
+            <p align="justify"><font face="Arial" size="2">ao executar a pesquisa Amaro, Jorge Luis /(10) sobre o &iacute;ndice teremos como resultado todos os registros que possuem a entrada Amaro, Jorge Luis extra&iacute;da tanto do campo 10, como do campo 16 ou do campo 23; desta forma ser&atilde;o recuperados os registros independentemente do tipo de autor que esteja registrado na base de dados.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">A atribui&ccedil;&atilde;o de um Id &uacute;nico para v&aacute;rias etiquetas da base de dados permite facilitar ao utilizador a formula&ccedil;&atilde;o das express&otilde;es de pesquisa de modo a realizar pesquisas gen&eacute;ricas (localizar um termo existente em qualquer campo), ou pesquisas qualificadas (localizar um termo particular, qualificado a partir do Id definido na FST). O &acirc;mbito de cada pesquisa depender&aacute; assim das decis&otilde;es tomadas na defini&ccedil;&atilde;o das chaves da FST.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">Neste momento existem 8 t&eacute;cnicas de indexa&ccedil;&atilde;o:</font></p>
+
+            <p>
+
+            <table class="td" height="202" cellspacing="0" cellpadding="0" width="604" summary="" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td valign="top" width="30"><font face="Arial" size="2">0</font></td>
+
+                        <td><font face="Arial" size="2">Adiciona ao arquivo invertido cada linha gerada atrav&eacute;s do formato de extra&ccedil;&atilde;o</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">1</font></td>
+
+                        <td><font face="Arial" size="2">Adiciona ao arquivo invertido cada subcampo gerado atrav&eacute;s do formato de extra&ccedil;&atilde;o</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">2</font></td>
+
+                        <td><font face="Arial" size="2">Adiciona ao arquivo invertido os elementos delimitados pelos caracteres ... gerados atrav&eacute;s do formato de extra&ccedil;&atilde;o</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">3</font></td>
+
+                        <td><font face="Arial" size="2">Adiciona ao arquivo invertido os elementos delimitados pelos caracteres /.../ gerados atrav&eacute;s do formato de extra&ccedil;&atilde;o</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">4</font></td>
+
+                        <td><font face="Arial" size="2">Adiciona ao arquivo invertido cada palavra gerada atrav&eacute;s do formato de extra&ccedil;&atilde;o</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">5</font></td>
+
+                        <td><font face="Arial" size="2">Igual &agrave; t&eacute;cnica 1, adicionando um prefixo a cada chave criada</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">6</font></td>
+
+                        <td><font face="Arial" size="2">Igual &agrave; t&eacute;cnica 2, adicionando um prefixo a cada chave criada</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">7</font></td>
+
+                        <td><font face="Arial" size="2">Igual &agrave; t&eacute;cnica 3, adicionando um prefixo a cada chave criada</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top"><font face="Arial" size="2">8</font></td>
+
+                        <td><font face="Arial" size="2">Igual &agrave; t&eacute;cnica 4, adicionando um prefixo a cada chave criada</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p align="justify"><font face="Arial" size="2">As t&eacute;cnicas 2 e 3 t&ecirc;m efeitos semelhantes na cria&ccedil;&atilde;o da chave; a diferen&ccedil;a prov&eacute;m do tipo de delimitador utilizado para identificar as palavras chave. No caso do delimitador ... este poder&aacute; ser escondido atrav&eacute;s do recurso &agrave; declara&ccedil;&atilde;o de modo MHx ou MDx, no formato de extra&ccedil;&atilde;o. O delimitador /.../ n&atilde;o permite esta facilidade e estar&aacute; sempre vis&iacute;vel tanto nas listagens impressas como na visualiza&ccedil;&atilde;o no tela.
+
+            </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Quando se aplica uma FST sobre um registro, para obter uma chave, a ordem das opera&ccedil;&otilde;es &eacute; a seguinte: </font></p>
+
+            <ol>
+
+                <li><font face="Arial" size="2">O formato de extra&ccedil;&atilde;o aplicado sobre o registro permite obter a lista de chaves </font></li>
+
+                <li><font face="Arial" size="2">Sobre esta lista &eacute; aplicada a t&eacute;cnica de indexa&ccedil;&atilde;o associada ao formato de extra&ccedil;&atilde;o</font></li>
+
+                <li><font face="Arial" size="2">A cada chave individual, que resulte da aplica&ccedil;&atilde;o da t&eacute;cnica de indexa&ccedil;&atilde;o sobre a lista de chaves, &eacute; atribuido o Id correspondente sendo ent&atilde;o armazenada no arquivo invertido. </font>
+
+                <p align="justify"><font face="Arial" size="2">Exemplo: Consideremos o seguinte registro (no formato MARC):</font></p>
+
+                </li>
+
+            </ol>
+
+            <blockquote dir="ltr" style="MARGIN-RIGHT: 0px">
+
+            <p align="justify"><font face="courier new"><font size="2">35 :&nbsp;&nbsp;$9(DLC) 90049743<br />
+
+            10 :&nbsp;&nbsp;^a 90049743<br />
+
+            20 :&nbsp;&nbsp;^a0387974490 (alk. paper)<br />
+
+            40 :&nbsp;&nbsp;^aDLC^cDLC^dDLC<br />
+
+            41 : 0^aeng^bfregerhebjapsparus<br />
+
+            500: 0^aGC89^b.E54 1991<br />
+
+            820: 0^a551.4/58$220<br />
+
+            100:1 ^aEmery, K. O.^q(Kenneth Orris),^d1914-<br />
+
+            245:10^aSea levels and tide gauges /^cK.O Emery, David G. Aubrey.<br />
+
+            260: &nbsp;^aNew York :^bSpringer-Verlag,^cc1991.<br />
+
+            300: &nbsp;^axiv, 237 p. :^bill., maps :^c29 cm.<br />
+
+            500: &nbsp;^aIn English, with summaries in French, German, Hebrew, Japanese, Spanish, and Russian.<br />
+
+            504: &nbsp;^aIncludes bibliographical references (p. 207-226) and indexes.<br />
+
+            650: 0^aSea level.<br />
+
+            650: 0^aSubsidences (Earth movements)<br />
+
+            650: 0^aTide-gages.<br />
+
+            650: 0^aDatabase management^xCongresses.<br />
+
+            650: 0^aArtificial intelligence^xCongresses.<br />
+
+            700:1 ^aAubrey, David G.<br />
+
+            520:000113 35151<br />
+
+            935:LA</font><br />
+
+            </font></p>
+
+            </blockquote>
+
+            <p dir="ltr" align="justify"><font face="Arial" size="2">do qual pretendemos obter as seguintes chaves:</font></p>
+
+            <p dir="ltr" style="MARGIN-RIGHT: 0px" align="justify">
+
+            <table class="td" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">T&iacute;tulo (245)</font></td>
+
+                        <td><font face="Arial" size="2">para ser recuperado por cada uma das palavras</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Autores (100 e 700)</font></td>
+
+                        <td><font face="Arial" size="2">para serem recuperados na forma completa (apelido + nome) e ainda por apelido ou nome</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Assuntos (650)</font></td>
+
+                        <td><font face="Arial" size="2">que podem ser recuperados pela frase completa ou por qualquer palavra</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Idiomas (41)</font></td>
+
+                        <td><font face="Arial" size="2">Todos os idiomas (nota: no subcampo b do campo 41 os idiomas s&atilde;o incluidos em cadeia onde cada 3 caracteres representam o c&oacute;digo de um idioma diferente</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Publica&ccedil;&atilde;o (260)</font></td>
+
+                        <td><font face="Arial" size="2">tal como aparece no documento</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de edi&ccedil;&atilde;o(260)</font></td>
+
+                        <td><font face="Arial" size="2">tal como aparece no documento </font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Classifica&ccedil;&atilde;o LC (50)</font></td>
+
+                        <td><font face="Arial" size="2">de tal forma que permita uma pesquisa geral pelo primeiro n&iacute;vel de classifica&ccedil;&atilde;o e pela classifica&ccedil;ao completa</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de entrada na base de dados (5)</font></td>
+
+                        <td><font face="Arial" size="2">para recuperar todos os t&iacute;tulos criados num ano, num m&ecirc;s ou num ano/m&ecirc;s  e num ano/m&ecirc;s/dia</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">A Fst necess&aacute;ria para implementar esta especifica&ccedil;&atilde;o &eacute; a seguinte<br />
+
+            </font></p>
+
+            <p>
+
+            <table class="td" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">T&iacute;tulo (245)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">245 4 v245^a</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Autores (100 y 700)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">100 0 v100^a/,(v700^a/)<br />
+
+                        100 4 v100^a/(v700^a/)</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Assuntos (650)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">650 1 (v650*2/)<br />
+
+                        650 4 (v650*2/)</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Idiomas (41)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p>
+
+                        <table class="td">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td valign="top" width="30"><font face="Arial" size="2">41&nbsp; 0 </font></td>
+
+                                    <td><font face="Arial" size="2">v41^a/v41^b.3/ v41^b*3.3/ v41^b*6.3/ v41^b*9.3/ v41^b*12.3/ v41^b*15.3/ v41^b*18.3</font></td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        </p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Publica&ccedil;&atilde;o (260)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">260 0 v260^b</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Data de edi&ccedil;&atilde;o(260)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">260 0 v260^c</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Classifica&ccedil;&atilde;o LC (50)</font></p>
+
+                        </td>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">50 0 v260^a/v260^a,v260^b</font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+
+                        <p dir="ltr" style="MARGIN-RIGHT: 0px"><font face="Arial" size="2">Data de entrada na base de dados (5)</font></p>
+
+                        </td>
+
+                        <td><font face="Arial" size="2">5 0 v5.4/v5.6/v5</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p><font face="Arial" size="2">O conceito l&oacute;gico de arquivo invertido corresponde a um conjunto de 6 arquivos f&iacute;sicos, 5 dos quais s&atilde;o &iacute;ndices de acesso para o dicion&aacute;rio de termos, o qual (com a extens&atilde;o .ifp) inclui todas as chaves obtidas da base de dados atrav&eacute;s da aplica&ccedil;&atilde;o da tabela de extra&ccedil;&atilde;o de campos (fst) a cada um dos registros. </font></p>
+alfab&eacute;tica
+            <p align="justify"><font face="Arial" size="2">O dicion&aacute;rio de termos &eacute; uma lista  de todos os pontos de acesso que foram extra&iacute;dos da base de dados (com o aux&iacute;lio da .fst) e cada chave tem associada uma lista de apontadores que definem a origem de onde se extraiu o termo. Esta lista de apontadores denominada "postings" tem 4 componentes: </font></p>
+
+            <p><font face="Arial" size="2"></font></p>
+
+            <ul>
+
+                <li><font face="Arial" size="2">Mfn do registro de onde se extraiu a chave </font></li>
+
+                <li><font face="Arial" size="2">Id. do campo, tal como foi indicado na primeira coluna da FST </font></li>
+
+                <li><font face="Arial" size="2">N&uacute;mero da ocorr&ecirc;ncia do campo de onde se extraiu a chave </font></li>
+
+                <li><font face="Arial" size="2">Posi&ccedil;&atilde;o relativa da palavra dentro do campo do qual se extraiu a chave (quando o campo &eacute; indexado pela t&eacute;cnica 4) </font></li>
+
+            </ul>
+
+            <p><font face="Arial" size="2">Por exemplo, se o termo "Educa&ccedil;&atilde;o" aparece nos registros 1 e 20 do campo Assuntos (v76) e tamb&eacute;m se encontra no campo T&iacute;tulo (v16) do registro 35: M&eacute;todos de educa&ccedil;&atilde;o &agrave; dist&acirc;ncia, ao aplicar a seguinte Fst sobre o registro: </font></p>
+
+            <font face="courier new"><font size="2">76 0 (v76/)<br />
+
+            16 4 v16</font><font face="arial">
+
+            <p><font size="2">o dicion&aacute;rio de termos incluir&aacute; o termo Educa&ccedil;&atilde;o da seguinte forma: </font></p>
+
+            <p><font size="2"></font></p>
+
+            <p><font size="2">EDUCAÇÃO 1 76 1 1&nbsp; <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font><font size="2">20 76 1 1&nbsp;&nbsp; <br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 35 16 1 3 </font></p>
+
+            <p><font size="2">Foram criados tr&ecirc;s "postings" para o termo educa&ccedil;&atilde;o. O primeiro, 1 76 1 1 indica que a palavra-chave vem do MFN 1, primeira ocorr&ecirc;ncia do campo 76 e est&aacute; localizada no in&iacute;cio do campo. O segundo apontador 20 76 1 1 especifica que tamb&eacute;m se encontra no Mfn 20, campo 76, primeira ocorr&ecirc;ncia e primeira palavra e por &uacute;ltimo, 35 16 1 3 indica que o registro 35 cont&eacute;m o termo educa&ccedil;&atilde;o, extra&iacute;do do campo 16, primeira ocorr&ecirc;ncia sendo a terceira palavra do campo. </font></p>
+
+            <p><font size="2">A t&eacute;cnica de indexa&ccedil;&atilde;o 0 coloca sempre o valor 1 como posi&ccedil;&atilde;o relativa da chave dentro do campo. As restantes t&eacute;cnicas de indexa&ccedil;&atilde;o fornecem a posi&ccedil;&atilde;o relativa da chave dentro do campo. Esta posi&ccedil;&atilde;o relativa permite a pesquisa por proximidade, dado que se torna poss&iacute;vel saber qual a dist&acirc;ncia entre palavras atrav&eacute;s da determina&ccedil;&atilde;o da diferen&ccedil;a relativa de cada posi&ccedil;&atilde;o. &nbsp;</font><font size="2">A dist&acirc;ncia entre dois termos obt&eacute;m-se atrav&eacute;s da diferen&ccedil;a entre as suas posi&ccedil;&otilde;es relativas. </font></p>
+
+            <p><font size="2">O valor do n&uacute;mero da ocorr&ecirc;ncia &eacute; utilizado para aplicar o operador (F) de forma a determinar se, numa express&atilde;o de pesquisa, os termos est&atilde;o na mesma ocorr&ecirc;ncia de um campo repet&iacute;vel. </font></p>
+
+            <p><font size="2">Por exemplo, supondo que um registro cont&eacute;m o seguinte texto no campo Resumo </font></p>
+
+            <p><font size="2">72: A educa&ccedil;&atilde;o presencial fortalece-se com a adequa&ccedil;&atilde;o...<br />
+
+            72: A dist&acirc;ncia entre a aula e a biblioteca deve... </font></p>
+
+            <p><font size="2">Se este campo for indexado da seguinte maneira: 72 4 (v72/) e posteriormente queremos recuperar todos os documentos cujo conte&uacute;do fa&ccedil;a refer&ecirc;ncia a EDUCAÇÃO À DISTÂNCIA, a express&atilde;o de pesquisa: </font></p>
+
+            <p><font size="2">EDUCACAO (G) DISTANCIA </font></p>
+
+            <p><font size="2">Recupera o registro mencionado anteriormente mesmo que n&atilde;o haja uma refer&ecirc;ncia expl&iacute;cita a Educa&ccedil;&atilde;o &agrave; dist&acirc;ncia, por&eacute;m </font></p>
+
+            <p><font size="2">EDUCACAO (F) DISTANCIA </font></p>
+
+            <p><font size="2">N&atilde;o recuperar&aacute; o registro. A raz&atilde;o est&aacute; na diferen&ccedil;a entre o operador (G), que n&atilde;o averigua qual a ocorr&ecirc;ncia de onde foi originada a chave, e o operador (F) que analisa o n&uacute;mero da ocorr&ecirc;ncia de cada um dos "postings" dos termos recuperados. </font></p>
+
+            <p><font size="2">Analisemos agora a FST que mencionamos no in&iacute;cio desta p&aacute;gina:</font></p>
+
+            <p>
+
+            <table class="td" cellspacing="4" cellpadding="2" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td width="200" colspan="2"><font size="2">245 4 v245^a</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Extrai o subcampo do campo 245 e ao resultado aplica a t&eacute;cnica de indexa&ccedil;&atilde;o 4. Cada palavra obtida &eacute; adicionada ao arquivo invertido com o identificador 245</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top" colspan="2"><font size="2">100 0 v100^a/,(v700^a/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Extrai o subcampo do campo 100 e o subcampo do campo 700. Analisa o resultado obtido identificando as linhas (t&eacute;cnica 0) e cada linha obtida &eacute; adicionada ao arquivo invertido com o identificador 100. Note-se que o formato de extra&ccedil;&atilde;o v100^a, v700^a n&atilde;o produziria os resultados desejados pelas seguintes raz&otilde;es:</font>
+
+                        <ul>
+
+                            <li><font size="2">a t&eacute;cnica de indexa&ccedil;&atilde;o 0 seleciona as linhas do campo obtidas atrav&eacute;s do formato de extra&ccedil;&atilde;o. Como n&atilde;o est&aacute; indicada a separa&ccedil;&atilde;o por linhas (/), o formato de extra&ccedil;&atilde;o origina uma &uacute;nica cadeia de caracteres com todos os autores cont&iacute;guos e desta cadeia apenas ser&atilde;o considerados os  primeiros 30 caracteres para serem adicionados ao arquivo invertido </font></li>
+
+                            <li><font size="2">o campo 700 &eacute; repet&iacute;vel; portanto, se n&atilde;o for editado como um grupo repet&iacute;vel o formato extrai todas as ocorr&ecirc;ncias do campo, criando uma &uacute;nica frase, e ent&atilde;o cada autor n&atilde;o ser&iacute;a adicionado como chave independente ao arquivo invertido </font></li>
+
+                        </ul>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top" colspan="2"><font size="2">100 4 v100^a/(v700^a/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Extrai o subcampo dos campos 100 e 700 do registro. Cada ocorr&ecirc;ncia &eacute; colocada numa nova linha. Da lista criada extrai cada uma das palavras (t&eacute;cnica 4) e adiciona ao arquivo invertido com o identificador 100. Cada palavra juntar&aacute; o n&uacute;mero da ocorr&ecirc;ncia, que ocupa o autor no campo, bem como a sua posi&ccedil;&atilde;o relativa dentro de cada ocorr&ecirc;ncia. <br />
+
+                        Se estamos a usar a indexa&ccedil;&atilde;o por palavras porque &eacute; necess&aacute;rio incluir as separa&ccedil;&otilde;es por linha para separar os campos e as ocorr&ecirc;ncias? <br> Pela seguinte raz&atilde;o: se n&atilde;o for inclu&iacute;da uma separa&ccedil;&atilde;o entre v100^a e v700^a, a &uacute;ltima palavra de v100^a apareceria junto &agrave; primeira palavra da primeira ocorr&ecirc;ncia de v700^a, produzindo uma entrada errada no &iacute;ndice. De igual modo, se n&atilde;o forem separadas as ocorr&ecirc;ncias de v700 com uma mudan&ccedil;a de linha, a primeira palavra da ocorr&ecirc;ncia seguinte apareceria junto da ùltima palavra da ocorr&ecirc;ncia anterior. </font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td valign="top" colspan="2"><font size="2">650 1 (v650*2/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Neste exemplo vamos extrair cada subcampo do campo 650 e para cada um, adicionamos uma entrada no arquivo invertido com a identifica&ccedil;&atilde;o 650.</font>
+
+                        <p><font size="2">Porqu&ecirc; a declara&ccedil;&atilde;o v650*2?<br> O registro apresentado no exemplo est&aacute; catalogado no formato MARC e inclui os indicadores previstos que ficam antes do subcampo a: </font></p>
+
+                        <p><font size="2">650 0^aDatabase management^xCongresses.<!--650--><br /><br />650 0^aArtificial intelligence^xCongresses.<!--650--><br /><br /></font></p>
+
+                        <font size="2">Se o formato da fst incluir (650 1 (v650/), ser&atilde;o considerados todos os subcampos de cada uma das ocorr&ecirc;ncias do campo 650; portanto, a parte correspondente aos indicadores ser&aacute; considerada no subcampo e teremos uma s&eacute;rie de chaves geradas com os indicadores do campo 650. Ao indicar no formato de extra&ccedil;&atilde;o a forma (v650*2/) estamos indicando que deve deslocar 2 posi&ccedil;&otilde;es, em rela&ccedil;&atilde;o ao inicio do campo, para que os indicadores n&atilde;o sejam considerados.</font>
+
+                        <p><font size="2">Quando se aplica a t&eacute;cnica de indexa&ccedil;&atilde;o 1 &eacute; necess&aacute;rio verificar que o formato de extra&ccedil;&atilde;o cont&eacute;m subcampos; isto &eacute;, se colocamos como formato de extra&ccedil;&atilde;o as chaves 650 1 mhu,(v650*2/) estaremos a criar chaves erradas j&aacute; que, por defini&ccedil;&atilde;o, o Modo MHU substitui os subcampos por caracteres de pontua&ccedil;&atilde;o levando ao seu desaparecimento. Ao aplicar o formato de extra&ccedil;&atilde;o sobre o registro e, neste caso, dado que apenas ser&aacute; criada uma &uacute;nica frase com todos os subcampos o arquivo invertido iria conter os primeiros 30 caracteres da frase obtida (por exemplo: ARTIFICIAL INTELLIGENCE. C0NGR), perdendo-se os pontos de acesso do registro. </font></p>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2"><font size="2">650 4 (v650*2/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Justifica&ccedil;&atilde;o id&ecirc;ntica a do caso anterior, exceto que s&atilde;o extra&iacute;das as palavras das linhas obtidas</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2"><font size="2">v41^a/v41^b.3/ v41^b*3.3/ v41^b*6.3/ v41^b*9.3/ v41^b*12.3/ v41^b*15.3/ v41^b*18.3</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Como o subcampo b tem um padr&atilde;o de entrada que especifica que cada idioma ocupa 3 posi&ccedil;&otilde;es, utilizando as op&ccedil;&otilde;es de deslocamento e o comprimento poderemos enviar cada idioma para o arquivo invertido</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2"><font size="2">50 0 v260^a/v260^a,v260^b</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Neste exemplo s&atilde;o criadas as chaves para cada classifica&ccedil;&atilde;o LC. A primeira chave v260^a permitir&aacute; realizar pesquisa por grupos tem&aacute;ticos. A segunda chave permitir&aacute; localizar um n&uacute;mero de clasifica&ccedil;&atilde;o particular. Vale salientar a presen&ccedil;a do sinal de mudan&ccedil;a de linha (/), que obriga a serem criadas chaves independentes</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2"><font size="2">v5.4/v5.6/v5</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font size="2"></font></td>
+
+                        <td><font size="2">Com esta data de entrada do documento s&atilde;o criadas tr&ecirc;s chaves: a primeira v5.4 permite localizar rapidamente todos todos os documentos entrados num ano; a segunda v5.6 recuperar&aacute; as entradas de um m&ecirc;s; e a terceira v5, as entradas  correspondentes a cada dia. Note-se que &eacute; mais eficiente criar estas tr&ecirc;s chaves (por ano, ano-m&ecirc;s e ano-m&ecirc;s-dia) para a recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o, em vez de uma &uacute;nica chave ao n&iacute;vel de ano, m&ecirc;s e d&iacute;a e aplicar o operador para truncar (<strong>$</strong>) &agrave; direita para fazer as pesquisas por ano e por ano e m&ecirc;s </font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p><font size="2">É assim muito importante que o formato de extra&ccedil;&atilde;o, a aplicar sobre o registro, esteja em conson&acirc;ncia com a t&eacute;cnica de indexa&ccedil;&atilde;o; se assim n&atilde;o for poder&aacute; incorrer em erros na cria&ccedil;&atilde;o das chaves. Al&eacute;m disto, uma boa aplica&ccedil;&atilde;o da linguagem de formata&ccedil;&atilde;o permitir&aacute; criar as chaves mais adequadas que assegurem uma eficiente recupera&ccedil;&atilde;o da informa&ccedil;&atilde;o. A compreens&atilde;o do mecanismo de armazenamento das chaves e a escolha do operador de pesquisa mais adequado garantir&aacute; uma resposta precisa &agrave;s necessidades de cada utilizador. <br />
+
+            </font></p>
+
+            <p><font size="2"></font></p>
+
+            </font></font></td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<p><br />
+
+<table cellspacing="0" cellpadding="0" width="95%" border="0">
+
+    <tbody>
+
+        <tr>
+
+            <td><font face="Arial" size="2"><b>Uso de prefixos no processo de cria&ccedil;&atilde;o de chaves</b></font>
+
+
+
+            <p align="justify"><font face="Arial" size="2">Como o dicion&aacute;rio de termos &eacute; um arquivo &uacute;nico com todas as chaves ordenadas alfab&eacute;ticamente, estas misturam autores, t&iacute;tulos e palavras chave e, em geral, todos os campos indexados na FST . </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Se pretendemos manter separadas estas chaves por tipo de campo de onde foram originadas, teremos duas poss&iacute;veis solu&ccedil;&otilde;es: </font></p>
+
+            <ol>
+
+                <li><font face="Arial" size="2">Utilizar prefixos, no momento de criar as chaves de indexa&ccedil;&atilde;o, de forma a constituir sub-dicion&aacute;ros no interior do dicion&aacute;rio de termos </font></li>
+
+                <li><font face="Arial" size="2">Criar dicion&aacute;rios de acordo com o conte&uacute;do de cada um dos campos. </font></li>
+
+            </ol>
+
+            <p align="justify"><font face="Arial" size="2">De acordo com a primeira op&ccedil;&atilde;o, se a fst</font>
+
+            <table class="td" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td width="30%"><font face="Arial" size="2">T&iacute;tulo (245)</font></td>
+
+                        <td width="70%"><font face="Arial" size="2">245 4 v245^a</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Autores (100 y 700)</font></td>
+
+                        <td><font face="Arial" size="2">100 0 v100^a/,(v700^a/)<br />
+
+                        100 4 v100^a/(v700^a/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Assuntos (650)</font></td>
+
+                        <td><font face="Arial" size="2">650 1 (v650*2/)<br />
+
+                        650 4 (v650*2/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Idiomas (41)</font></td>
+
+                        <td>
+
+                        <table class="td">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td valign="top" width="33"><font face="Arial" size="2">41 &nbsp;0 </font></td>
+
+                                    <td><font face="Arial" size="2">v41^a/v41^b.3/ v41^b*3.3/ v41^b*6.3/ v41^b*9.3/ v41^b*12.3/ v41^b*15.3/ v41^b*18.3</font></td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Publica&ccedil;&atilde;o (260)</font></td>
+
+                        <td><font face="Arial" size="2">260 0 v260^b</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de edi&ccedil;&atilde;o (260)</font></td>
+
+                        <td><font face="Arial" size="2">260 0 v260^c</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Classifica&ccedil;&atilde;o LC (50)</font></td>
+
+                        <td><font face="Arial" size="2">50 &nbsp; 0 v260^a/v260^a,v260^b</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de entrada na base de dados (5)</font></td>
+
+                        <td><font face="Arial" size="2">5 &nbsp; 0 v5.4/v5.6/v5</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p align="justify"><font face="Arial" size="2">for modificada para</font>
+
+            <table class="td" border="1">
+
+                <tbody>
+
+                    <tr>
+
+                        <td width="30%"><font face="Arial" size="2">T&iacute;tulo (245)</font></td>
+
+                        <td width="70%"><font face="Arial" size="2">245 8 `/T:/`,v245^a</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Autores (100 y 700)</font></td>
+
+                        <td><font face="Arial" size="2">100 0 "A:"v100^a/,(|A:|v700^a/)<br />
+
+                        100 8 `/A:/`,v100^a/(|A:|v700^a/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Assuntos (650)</font></td>
+
+                        <td><font face="Arial" size="2">650 5 `/M:/`,(v650*2/)<br />
+
+                        650 4 `/M:/`,(v650*2/)</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Idiomas (41)</font></td>
+
+                        <td>
+
+                        <table class="td">
+
+                            <tbody>
+
+                                <tr>
+
+                                    <td valign="top" width="33"><font face="Arial" size="2">41 &nbsp;8 </font></td>
+
+                                    <td><font face="Arial" size="2">`/I:/`,v41^a," "v41^b.3," "v41^b*3.3, " "v41^b*6.3, " "v41^b*9.3, " "v41^b*12.3, " "v41^b*15.3, " "v41^b*18.3</font></td>
+
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Publica&ccedil;&atilde;o (260)</font></td>
+
+                        <td><font face="Arial" size="2">260 0 "E:"v260^b</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de edi&ccedil;&atilde;o (260)</font></td>
+
+                        <td><font face="Arial" size="2">260 0 "F:"v260^c</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Classifica&ccedil;&atilde;o LC (50)</font></td>
+
+                        <td><font face="Arial" size="2">50 &nbsp; 0 "C:"v260^a/"C:"v260^a,v260^b</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td><font face="Arial" size="2">Data de entrada na base de dados (5)</font></td>
+
+                        <td><font face="Arial" size="2">5 &nbsp; 0 "F:"v5.4/"F:"v5.6/"F:"v5</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </p>
+
+            <p><font face="Arial" size="2">Como se pode observar foram introduzidas as seguintes altera&ccedil;&otilde;es:</font></p>
+
+            <p><font face="Arial" size="2"></font></p>
+
+            <center>
+
+            <table class="td" border="2">
+
+                <tbody>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">T&eacute;cnica</font></td>
+
+                        <td><font face="Arial" size="2">Alterada para </font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">1</font></td>
+
+                        <td align="center"><font face="Arial" size="2">5</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">4</font></td>
+
+                        <td align="center"><font face="Arial" size="2">8</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            </center>
+
+            <p align="justify"><font face="Arial" size="2">As chaves que se estavam sendo indexada com a t&eacute;cnica 0, foram alteradas para adicionar um pr&eacute;-literal com o prefixo que queremos utilizar para diferenciar os dados. Para as restantes t&eacute;cnicas de indexa&ccedil;&atilde;o (5, 6, 7 e 8) o prefixo deve ser incluido antes do formato de extra&ccedil;&atilde;o, com a seguinte sintaxe: </font></p>
+
+            <ol>
+
+                <li><font face="Arial" size="2">o prefixo fica colocado entre ap&oacute;strofes (literal n&atilde;o condicional) </font></li>
+
+                <li><font face="Arial" size="2">o literal correspondente ao prefixo fica colocado entre dois caracteres especiais que n&atilde;o estejam inclu&iacute;dos no prefixo. <br />
+
+                exemplo:`/A:/` <br />
+
+                `#A:#` </font></li>
+
+            </ol>
+
+            <p align="justify"><font face="Arial" size="2">Al&eacute;m de ser poss&iacute;vel ver o conte&uacute;do de um campo de forma ordenada, sem ser misturado com termos obtidos de outros campos, a pesquisa atrav&eacute;s de prefixo &eacute; mais r&aacute;pida que a pesquisa qualificada; ou seja: </font></p>
+
+            <p><font face="Arial" size="2">Procurar M:Educa&ccedil;&atilde;o &eacute; mais eficiente que Educa&ccedil;&atilde;o/(650) pois a pesquisa qualificada obriga a verificar cada um dos apontadores (postings) do termo. </font></p>Arquivo
+
+            <p align="justify"><font face="Arial" size="2">Al&eacute;m disto, dependendo da experi&ecirc;ncia dos usu&aacute;rios finais e da capacidade do equipamento onde a base de dados fica instalada, a indexa&ccedil;&atilde;o dos dados poder&aacute; ser feita de v&aacute;rias maneiras, com e sem prefixo, de modo a permitir maior flexibilidade nas pesquisas. Um maior n&uacute;mero de chaves de pesquisa implica maior espa&ccedil;o em disco mas n&atilde;o necess&aacute;riamente menor velocidade de recupera&ccedil;&atilde;o, dada a estrutura do arquivo invertido (&aacute;rvore B*) a qual se reorganiza constantemente  para que a altura da &aacute;rvore seja sempre a mesma em todos os seus ramos ( a altura da &aacute;rvore reflete o n&uacute;mero de acessos necess&aacute;rios para localizar um termo do arquivo invertido. (ver </font><a href="javascript:../../msi/cdsisis/basico/listasinvertidas.html"><font face="Arial" size="2">Estrutura do  invertido</font></a><font face="Arial" size="2">). </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Os produtos da fam&iacute;lia CDS/ISIS, exceptuando Isis/Dos e WinIsis permitem definir mais de um dicion&aacute;rio de termos para uma base de dados. Isto &eacute;, com o IsisDll, por exemplo, podemos criar um dicion&aacute;rio para autores, outro para t&iacute;tulos, etc. Contudo, para que os termos de diferentes campos possam ser combinados entre si, numa mesma express&atilde;o de pesquisa, atrav&eacute;s dos operadores booleanos, ser&aacute; necess&aacute;rio definir um dicion&aacute;rio geral que agrupe todos, j&aacute; que n&atilde;o &eacute; poss&iacute;vel cruzar os termos de v&aacute;rios dicion&aacute;rios. A facilidade de usar dicion&aacute;rios particulares substitui o uso de prefixos, para apresentar ao utilizador os termos extraidos de um campo particular, e permite operar l&oacute;gicamente os termos de um mesmo dicion&aacute;rio. </font></p>
+
+            <p><font face="Arial" size="2"></font></p>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+</p>
+
+<p>
+
+<table cellspacing="0" cellpadding="0" width="95%" border="0">
+
+    <tbody>
+
+        <tr>
+
+            <td><font face="Arial" size="2"><b>Transpar&ecirc;ncia no uso de mai&uacute;sculas, min&uacute;sculas e caracteres especiais</b></font>
+
+            <p align="justify"><font face="Arial" size="2">Uma das particularidades do mecanismo de pesquisa do CDS/ISIS est&aacute; na transpar&ecirc;ncia quanto ao uso de mai&uacute;sculas, min&uacute;sculas e caracteres especiais.</font></p>
+
+            <p align="justify"><font face="Arial" size="2">Para ser poss&iacute;vel este objetivo, todas as chaves s&atilde;o guardadas em mai&uacute;sculas no arquivo invertido e, se tal for parametrizado, os caracteres acentuados s&atilde;o convertidos no seu equivalente em mai&uacute;sculas. No momento da pesquisa as respectivas express&otilde;es s&atilde;o transformadas igualmente em mai&uacute;sculas o que reduz os erros por deficiente digita&ccedil;&atilde;o dos termos pelo utilizador.
+
+            . </font></p>
+Arquivo
+            <p align="justify"><font face="Arial" size="2">Para realizar a convers&atilde;o das chaves e express&otilde;es de pesquisa, as estruturas CDS/ISIS utilizam o  ISISUC.TAB que dever&aacute; estar em concord&acirc;ncia com o conjunto de caracteres adotado para a base de dados (ver </font><a target="_blank" href="configuracion.html#isisuc"><font face="Arial" size="2">Tabela de convers&atilde;o de mai&uacute;sculas a min&uacute;sculas</font></a><font face="Arial" size="2">) </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Quando se indexam os campos com a t&eacute;cnica 4 (por palavras) CDS/ISIS utiliza a tabela </font><a target="_blank" href="configuracion.html#isisac"><font face="Arial" size="2">ISISAC.TAB</font></a>&nbsp;<font face="Arial" size="2">para estabelecer a composi&ccedil;&atilde;o do conceito "palavra"; isto &eacute;, a tabela ISISAC.TAB indica ao CDS/ISIS quais os caracteres a considerar como alfab&eacute;ticos, para formar as palavras. Qualquer caracter que n&atilde;o fa&ccedil;a parte da ISISAC.TAB ser&aacute; considerado um separador e dar&aacute; por terminada a palavra. </font></p>
+
+            <p align="justify"><font face="Arial" size="2">Suponhamos que na ISISUC.TAB estabelecemos como equivalente &agrave; letra &ntilde; a sua express&atilde;o em mai&uacute;scula &Ntilde;. Se em ISISAC.TAB n&atilde;o for incluido o c&oacute;digo &Ntilde; (165 em Ascii ou 209 en Ansi) </font></p>
+
+            <table>
+
+                <tbody>
+
+                    <tr>
+
+                        <td width="100"><font face="Arial" size="2">as palavras: </font></td>
+
+                        <td><font face="Arial" size="2">aparecer&atilde;o no &iacute;ndice como</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">ni&ntilde;o </font></td>
+
+                        <td align="center"><font face="Arial" size="2">NI O</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">ca&ntilde;er&iacute;a </font></td>
+
+                        <td align="center"><font face="Arial" size="2">CA ERIA</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">ca&ntilde;averal </font></td>
+
+                        <td align="center"><font face="Arial" size="2">CA AVERAL</font></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td align="center"><font face="Arial" size="2">acu&ntilde;aci&oacute;n </font></td>
+
+                        <td align="center"><font face="Arial" size="2">ACU ACION</font></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <br />
+
+            <font face="Arial" size="2">isto &eacute;, cada palavra divide-se em duas, criando duas entradas no dicion&aacute;rio, j&aacute; que no caso de o &ntilde; n&atilde;o estar inclu&iacute;do em ISISAC.TAB passa a ser considerado como um separador equivalente a um sinal de pontua&ccedil;&atilde;o.</font>
+
+            <p>&nbsp;</p>
+
+            <p>&nbsp;</p>
+
+            </td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+</p>
+
+<p>&nbsp;</p>

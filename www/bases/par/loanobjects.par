@@ -1,0 +1,6 @@
+loanobjects.*=%path_database%loanobjects/data/loanobjects.*
+prologoact.pft=%path_database%www/prologoact.pft
+epilogoact.pft=%path_database%www/epilogoact.pft
+isisac.tab=%path_database%loanobjects/data/isisac.tab
+isisuc.tab=%path_database%loanobjects/data/isisuc.tab
+STW=%path_database%loanobjects/data/loanobjects.stw

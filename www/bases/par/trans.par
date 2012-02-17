@@ -1,0 +1,4 @@
+trans.*=%path_database%trans/data/trans.*
+isisac.tab=%path_database%trans/data/isisac.tab
+isisuc.tab=%path_database%trans/data/isisuc.tab
+STW=%path_database%trans/data/trans.stw

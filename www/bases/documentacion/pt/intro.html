@@ -1,0 +1,196 @@
+<font face="arial">
+
+<p><strong><font size="3">Introdu&ccedil;&atilde;o</font></strong></p>
+
+<p><font size="2">ABCD consta de 6 m&oacute;dulos:</font></p>
+
+<ul>
+
+    <li><font size="2">Administra&ccedil;&atilde;o de bases de dados </font></li>
+
+    <li><font size="2">Cataloga&ccedil;&atilde;o </font></li>
+
+    <li><font size="2">Empr&eacute;stimo </font></li>
+
+    <li><font size="2">Estat&iacute;sticas </font></li>
+
+    <li><font size="2">Aquisi&ccedil;&atilde;o</font></li>
+
+    <li><font size="2">Tesauro</font></li>
+
+</ul>
+
+<p><font size="2">que s&atilde;o ativados de acordo com as permiss&otilde;es atribu&iacute;das aos usu&aacute;rios.</font></p>
+
+<p><strong><font size="2">Instala&ccedil;&atilde;o:</font></strong></p>
+
+<p><font size="2">A instala&ccedil;&atilde;o do sistema contempla dois diret&oacute;rios:</font></p>
+
+<p><font size="2"><strong>ABCD</strong>: cont&eacute;m os scripts e outros recursos necess&aacute;rios para executar os programas e apresenta&ccedil;&atilde;o das p&aacute;ginas do sistema</font></p>
+
+<p><font size="2"><strong>BASES: </strong>cont&eacute;m os recursos que o usu&aacute;rio utiliza para criar ou modificar as bases de dados durante	a opera&ccedil;&atilde;o do ABCD (bases de dados, arquivos de mensagens, arquivos de ajuda, etc).</font></p>
+
+<p><font size="2">O motor de bases de dados usado &eacute; WXIS da Bireme o qual pode ser chamado nos v&aacute;rios scripts por meio de dois m&eacute;todos:</font></p>
+
+<p><font size="2"><strong>Exec</strong>: atua chamando o WXIS de maneira similar &agrave; linha de comandos</font></p>
+
+<p><font size="2"><strong>Http</strong>: atua chamando o WXIS usando um CGI. &Eacute; de responsabilidade do administrador do sistema a defini&ccedil;&atilde;o do diret&oacute;rio virtual CGI onde ser&aacute; executado o WXIS.</font></p>
+
+<p><font size="2">A forma de chamar o WXIS &eacute; definida pelo administrador do sistema no momento da instala&ccedil;&atilde;o e
+&eacute; registrada no ABCD mediante os par&acirc;metros correspondentes no arquivo de configura&ccedil;&atilde;o</font></p>
+
+<p><strong><font size="2">Arquivo de configura&ccedil;&atilde;o do ABCD</font></strong></p>
+
+<p><font size="2">Encontra-se localizado na pasta <strong>/abcd/php </strong>com o nome <strong>config.php</strong> e possui os seguintes par&acirc;metros:</font></p>
+
+<p>
+
+<table cellspacing="3" cellpadding="1" width="90%" summary="" border="1">
+
+    <tbody>
+
+        <tr>
+
+            <td valign="top"><font size="2">$db_path</font></td>
+
+            <td valign="top">
+
+            <p><font size="2">Caminho do diret&oacute;rio das bases de dados<br />
+
+            Ex.:&nbsp;&nbsp; $db_path="/abcd/www/bases/";</font></p>
+
+            <p><font size="2">Note que o caminho deve terminar com /. Deve manter tamb&eacute;m a sintaxe do par&acirc;metro, j&aacute; que de outra forma gerar&aacute; um
+            erro no momento de executar os scripts.</font></p>
+
+            <p><font size="2">As bases de dados podem estar localizadas em qualquer pasta no disco do sistema. Se usa ent&atilde;o, este par&acirc;metro	para sua localiza&ccedil;&atilde;o. Sob esta pasta o ABCD criar&aacute; um subpasta para cada base de dados.</font></p>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$Wxis</font></td>
+
+            <td valign="top">
+
+            <p><font size="2">Caminho onde est&aacute; o execut&aacute;vel wxis.exe, se este &eacute; o m&eacute;todo selecionado para a execu&ccedil;&atilde;o dos scripts. Se a execu&ccedil;&atilde;o for realizada pelo m&eacute;todo CGI, este par&acirc;metro
+            deve ficar em branco.</font></p>
+
+            <p><font size="2">Ex: $Wxis="/abcd/www/cgi-bin/wxis.exe";</font></p>
+
+            <p><font size="2">Indica que o execut&aacute;vel se chama wxis.exe e est&aacute; localizado na pasta /abcd/www/cgi-bin/</font></p>
+
+            <p><font size="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $Wxis="";</font></p>
+
+            <p><font size="2">Indica que o m&eacute;todo de execu&ccedil;&atilde;o do WXIS ser&aacute; atrav&eacute;s de um CGI</font></p>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$wxisUrl</font></td>
+
+            <td valign="top">
+
+            <p><font size="2">Especifica a URL a utilizar para chamar o WXIS, quando o m&eacute;todo selecionado &eacute; atrav&eacute;s de um CGI. </font></p>
+
+            <p><font size="2">Ex.: $wxisUrl=</font><a href="http://localhost/wxis/wxis.exe"><font size="2">http://localhost:9090/cgi-bin/wxis.exe</font></a><font size="2">;</font></p>
+
+            <p><font size="2">Neste caso o par&acirc;metro $Wxis dever&aacute; estar em branco ($Wxis="";). No entanto, se ambos os par&acirc;metros tem um valor atribu&iacute;do, ent&atilde;o o ABCD toma o url definido en $wxisUrl para a execu&ccedil;&atilde;o do Wxis.</font></p>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$lang</font></td>
+
+            <td valign="top">
+
+            <p><font size="2">Especifica o idioma de di&aacute;logo a ser utilizado por default<br />
+
+            Ex.: $lang=&quot;pt&quot;;&nbsp; para portugu&ecirc;s<br />
+
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$lang=&quot;en&quot;;&nbsp; para ingl&ecirc;s</font></p>
+
+            <p><font size="2">Os idiomas habilitados est&atilde;o na pasta <strong>bases</strong> num arquivo denominado <strong>lang.tab</strong></font></p>
+
+            </td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$lang_db</font></td>
+
+            <td valign="top"><font size="2">Especifica o idioma de di&aacute;logo a ser utilizado para localizar as estruturas de uma base de dados (FDT, FMT, PFT) quando as mesmas n&atilde;o se localizam no idioma ativo</font></td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$institution_name</font></td>
+
+            <td valign="top"><font size="2">Nome da institui&ccedil;&atilde;o</font></td>
+
+        </tr>
+
+        <tr>
+
+            <td valign="top"><font size="2">$FCKConfigurationsPath</font></td>
+
+            <td valign="top"><font size="2">Caminho de acesso ao arquivo de configura&ccedil;&atilde;o do editor de Html FCKEditor</font></td>
+
+        </tr>
+
+    </tbody>
+
+</table>
+
+<p><font size="2">Note que estes par&acirc;metros s&atilde;o parte de um script de programa&ccedil;&atilde;o. Portanto, n&atilde;o deve alterar seus nomes ou a sintaxe exibida. Pode alterar somente o que &eacute; exibido entre aspas ("....")&nbsp; para colocar os valores apropriados</font></p>
+
+<p><strong><font size="2">Verifica&ccedil;&atilde;o de usu&aacute;rios</font></strong></p>
+
+<p><font size="2">Na pasta <strong>bases</strong> existe uma subpasta denominada <strong>acces</strong> onde se indica os usu&aacute;rios que tem acesso ao ABCD. No momento da instala&ccedil;&atilde;o existem definidos dois tipos de usu&aacute;rio:</font></p>
+
+<ul>
+
+    <li><font size="2">Administrador do sistema </font></li>
+
+    <li><font size="2">Administrador de base de dados </font></li>
+
+    <li><font size="2">Operador de base de dados </font></li>
+
+    <li><font size="2">Administrador de empr&eacute;stimos</font></li>
+
+    <li><font size="2">Operador de empr&eacute;stimos</font></li>
+
+    <li><font size="2">Administrador de adquisi&ccedil;&atilde;o</font></li>
+
+    <li><font size="2">Operador de adquisi&ccedil;&atilde;o</font></li>
+
+    <li><font size="2">Administrador de tesauros</font></li>
+
+</ul>
+
+<p><font size="2">O ABCD &eacute; configurado dinamicamente de acordo com as autoriza&ccedil;&otilde;es previamente definidas para cada fun&ccedil;&atilde;o</font></p>
+
+<p><strong><font size="2">Verificando a instala&ccedil;&atilde;o do ABCD</font></strong></p>
+
+<p><font size="2">Para verificar se o wxis est&aacute; bem instalado deve executar a seguinte url: </font><font face="Arial"><a href="http://localhost:9090/cgi-bin/wxis.exe?IsisScript=hello"><font size="2">http://localhost:9090/cgi-bin/wxis.exe?IsisScript=hello</font></a><font size="2">. Obt&eacute;m-se como resposta:</font></font></p>
+
+<pre><font size="2">WXIS|file error|file open|Isis_Script|</font></pre>
+
+<pre>&nbsp;</pre>
+
+<font face="arial" size="2">
+
+<p>Para verificar se o ABCD est&aacute; bem instalado, executar a seguinte url: <font face="Arial"><a href="http://localhost:9090/central/test/test.php">http://localhost:9090/central/test/test.php</a>. Na p&aacute;gina exibida selecionar o segundo link. A p&aacute;gina apresentada vai indicar se h&aacute; algum erro na configura&ccedil;&atilde;o.</font></p>
+
+<p>&nbsp;</p>
+
+</font></font><font face="Arial" size="2">Se n&atilde;o apresentar erros, indica que o wxis est&aacute; instalado corretamente.</font>

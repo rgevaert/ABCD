@@ -1,0 +1,211 @@
+<!DOCTYPE html
+PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+	<title>OAI ABCD Harvesting Interface</title>
+	<link rel="stylesheet" type="text/css" href="public/css/layout.css">	
+	<script language="JavaScript" type="text/javascript" src="public/js/functions.js"></script>
+
+</head>
+
+<body marginheight="0" topmargin="0" leftmargin="0">
+<div id="header">
+	<div id="title">
+		Interface de Coleta de Metadados do OAI ABCD
+	</div>
+
+</div>
+<div id="group_content">
+	<div id="language" align="right">
+		<a href="index.html">english</a> - <a href="index_es.html">español</a>
+	</div>
+</div>
+
+<FORM name="sendQuery" method="post" action="#">
+<div id="main_group">
+	<div id="group_title">URL do OAI</div>
+	<div id="group_content">URL: <input type="text" name="oaiURL" size="50" maxlength="50"/></div>			
+</div>	
+<div>
+	<table width="100%" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="30%" valign="top">
+			<div id="left">			
+				<div id="group">
+					<div id="group_title">verbs</div>
+					<div id="group_content">
+						<div id="menu_item"><a href="javascript: setForm('Identify'); showVerb('Identify');">Identify</a></div>
+						<div id="menu_item"><a href="javascript: setForm('ListMetadataFormats'); showVerb('ListMetadataFormats');">ListMetadataFormats</a></div>
+						<div id="menu_item"><a href="javascript: setForm('ListIdentifiers'); showVerb('ListIdentifiers');">ListIdentifiers</a></div>
+						<div id="menu_item"><a href="javascript: setForm('ListSets'); showVerb('ListSets');">ListSets</a></div>
+						<div id="menu_item"><a href="javascript: setForm('ListRecords'); showVerb('ListRecords');">ListRecords</a></div>
+						<div id="menu_item"><a href="javascript: setForm('GetRecord'); showVerb('GetRecord');">GetRecord</a></div>																								
+					</div>			
+				</div>
+				<div id="group">
+					<div id="group_title">descrição do verb</div>
+					<div id="group_content">
+						<div id="Identify" name="Identify" style="display: none;">
+							<p>Este verb retorna as informações principais do protocolo.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul><li>verb</li></ul>
+							</p>
+						</div>
+						<div id="ListMetadataFormats" name="ListMetadataFormats" style="display: none;">
+							<p>Lista quais são os formatos de metadados utilizados no protocolo, no caso da ABCD o único utilizado é oai_dc.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul>
+								<li>verb</li>
+								</ul>
+							</p>							
+						</div>
+						<div id="ListIdentifiers" name="ListIdentifiers" style="display: none;">
+							<p>Recupera uma lista com o identificador único de cada artigo publicado.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul>
+								<li>verb</li>
+								<li>metadataPrefix</li>								
+							</ul>
+							</p>
+							<p>
+							<b>Parâmetros Opcionais</b>
+							<ul>
+								<li>from</li>
+								<li>until</li>
+								<li>set</li>								
+							</ul>
+							<p>
+							<b>Parâmetros Exclusivos</b>
+							<ul>
+								<li>resumptionToken</li>
+							</ul>
+							</p>									
+						</div>
+						<div id="ListSets" name="ListSets" style="display: none;">
+							<p>Recupera um lista com todas revistas publicadas na ABCD, informando o título e o setSpec (issn) de cada uma.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul>
+								<li>verb</li>
+							</ul>
+							</p>	
+							<p>
+							<b>Parâmetros Exclusivos</b>
+							<ul>
+								<li>resumptionToken</li>
+							</ul>
+							</p>									
+													
+						</div>
+						<div id="ListRecords" name="ListRecords" style="display: none;">
+							<p>Recupera o resumo dos artigos da ABCD.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul>
+								<li>verb</li>
+								<li>metadataPrefix</li>								
+							</ul>
+							</p>
+							<p>
+							<b>Parâmetros Opcionais</b>
+							<ul>
+								<li>from</li>
+								<li>until</li>
+								<li>set</li>								
+							</ul>
+							<p>
+							<b>Parâmetros Exclusivos</b>
+							<ul>
+								<li>resumptionToken</li>
+							</ul>
+							</p>															
+						</div>
+						<div id="GetRecord" name="GetRecord" style="display: none;">
+							<p>Recupera o texto completo dos artigos da ABCD.</p>
+							<p>
+							<b>Parâmetros Obrigatórios</b>
+							<ul>
+								<li>verb</li>
+								<li>metadataPrefix</li>						
+								<li>identifier</li>								
+							</ul>
+							</p>							
+						</div>																														
+					</div>			
+				</div>		
+			</div>
+			</td>
+			<td width="70%" valign="top">
+			<div id="right">
+				<div id="group">
+					<div id="group_title">configuração dos parâmetros</div>
+					<div id="group_content">
+							<table>
+								<tr>
+									<td>verb</td>
+									<td><input type="text" name="verb" disabled="disabled"/></td>
+									<td></td>
+								</tr>							
+								<tr>
+									<td>MetadataPrefix</td>
+									<td><input type="text" name="MetadataPrefix" maxlength="15"/></td>
+									<td>oai_dc | oai_dc_agris</td>
+								</tr>
+								<!--tr>
+									<td>set</td>
+									<td><input type="text" name="set" size="9" maxlength="9"/></td>
+								</tr-->	
+								<tr>
+									<td>identifier</td>
+									<td><input type="text" name="identifier" size="34" maxlength="34"/></td>
+									<td></td>
+								</tr>	
+								<tr>
+									<td>from</td>
+									<td><input type="text" name="from" size="10" maxlength="10"/></td>
+									<td>YYYY-MM-DD</td>
+								</tr>		
+								<tr>
+									<td>until</td>
+									<td><input type="text" name="until" size="10" maxlength="10"/></td>
+									<td>YYYY-MM-DD</td>									
+								</tr>	
+								<tr>
+									<td>Database</td>
+									<td><input type="text" name="database" size="34"/></td>
+									<td></td>									
+								</tr>										
+								<!--tr>
+									<td>resumptionToken</td>
+									<td><input type="text" name="resumptionToken" size="34"/></td>
+									<td></td>									
+								</tr-->	
+							</table>
+							<p align="right">
+							<a href="javascript: submitForm();">fazer pesquisa</a>
+							</p>		
+					</div>			
+				</div>
+				<div id="group">
+					<div id="group_title">saída</div>
+					<div id="group_content">
+						<div id="output">
+							URL Pesquisada:</br>
+							<input type="text" name="outputURL" size="100"/></br>
+							Resultado:</br>
+							<iframe name="oai_output" width="99%"/>
+						</div>
+					</div>			
+				</div>	
+			</div>
+			</td>
+		</tr>
+	</table>	
+</div>
+</FORM>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<metasearch id="" lang="fr" available="">
+  <text id="search_title" available="yes">Recherche dans ABCD</text>
+  <text id="search_freeSearch" available="yes">texte libre</text>
+  <text id="search_entryWords" available="yes">Entrez un ou plusieurs mots</text>
+  <text id="search_submit" available="yes">Rechercher</text>
+  <text id="search_howToSearch" available="yes">Comment rechercher</text>
+  <text id="search_allWords" available="yes">Tous les mots</text>
+  <text id="search_anyWord" available="yes">N'importe quel mot</text>
+  <text id="search_error" available="yes">Por favor utilize algum termo para expressão de pesquisa.</text>
+  <text id="search_advancedSearch" available="yes">Filtre de recherche</text>
+  <text id="search_results" available="yes">Résultats</text>
+  <text id="search_method">méthode</text>
+  <text id="search_demo">démo</text>
+  <text id="conceptSearch_title" available="yes">por relevancia</text>
+  <text id="conceptSearch_entryWords" available="yes">Rechercher des documents plus proches de ces concepts</text>
+  <text id="decs_mesh" available="no">Recherche par descripteurs DeCS/MeSH</text>
+</metasearch>

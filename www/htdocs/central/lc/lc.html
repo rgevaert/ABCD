@@ -1,0 +1,149 @@
+<html>
+
+  <head>
+    <title>Z39.50
+	</title>
+		  	<STYLE TYPE="text/css">  
+		.td {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #00626C }
+		.td5 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; background-color: #FFCC00; font-weight: bold; border-style: none; clip:  rect(   )}
+		BODY {FONT-FAMILY: Verdana, Helvetica, Arial; FONT-SIZE: 9pt }
+		input 		{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		select 		{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		textarea	{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		text	{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+
+		</STYLE>
+	
+  </head>
+  <script>
+function Transmitir(ixT){
+			window.opener.top.xeditar="S"
+			var Cuenta
+   			Seq="xx"
+   			campo=document.z3950.marc[ixT].value
+    		if (campo=="") {
+    			alert("No hay información para transferir")
+           		return
+      		}
+       		re = /\$/gi;
+	       	campo=campo.replace(re,"^")
+    		i=campo.indexOf("\n"+"  ",0)
+			while (i>0){
+				campo=campo.substr(0,i-1)+campo.substr(i+2)
+	      		i=campo.indexOf("\n"+"  ",0)
+			}
+			campo=escape(campo)
+			loc="../dataentry/fmt.php?userid=g&Opcion=capturar&ver=N&Mfn=New&base=marc&cipar=marc.par"
+			loc=loc+"&ValorCapturado="+campo
+       		window.opener.top.main.location=loc
+       		document.z3950.marc[ixT].value=""
+			window.opener.top.main.focus()
+   		}
+  </script>
+<body bgcolor="#ffffff" text="#000033" marginwidth="0" leftmargin="0" rightmargin="0" topmargin="0" alink="#0000ff">
+<table width="100%" border="0" cellpadding="3" cellspacing="0" bgcolor="#ffffff">
+<tr><td align="center">
+<table width="97%" border="0" cellpadding="3" cellspacing="0">
+<tr><td>
+<B>Catalogación vía Z39.50</b>
+</td></td>
+<tr><td>
+<form method="get" name=z3950>
+
+
+
+
+</td></tr>
+</table>
+</td></tr>
+</table>
+<table width="100%" cellspacing="0" cellpadding="3" border="0" bgcolor="#cccc99">
+<tr><td align="center"><table cellspacing="0" cellpadding="2" width="97%" border="0"><tr><td>Intento n°: 0<br>z3950.loc.gov:7090/voyager, Registros recuperados: <b>53</b> </td></tr></table>
+</td></tr><tr><td align="center"><table cellspacing="0" cellpadding="2" width="97%"  border="0" bgcolor="#000000">
+<tr><td align="center"><table cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#ffffff">
+<tr><td width="4%" align="left" valign="top"><table cellspacing="0" cellpadding="2" border="0"><tr><td align="center" class=td>
+1/53<br><a href="javascript:Transmitir(0)"><img src=img/registro.gif border=0 alt="Catalogar este registro"></a></td></tr></table></td><td width="96%"><table cellspacing="3"><tr><td><textarea cols=80 rows=20 name=marc>001 11863130
+005 20000112115328.0
+008 990930s1998    mx            000 0dspa  
+906   ^a7^bcbc^corigres^d2^encip^f19^gy-gencatlg
+925 0 ^aacquire^b1 shelf copy^xpolicy default
+955   ^aoc08 12-08-99 to SSCD; sj00 12-14-99; sj13 12-16-99 (desc.); sj13 12-30-99; sj04 01-12-00; to BCCD 01-12-00
+010   ^a   99521439 
+020   ^a9687419164
+035   ^a(MxMxBFM)bm 970101920
+040   ^aDLC^cDLC
+042   ^apcc
+043   ^an-mx---
+050 00^aLA428.7^b.A19 1998
+245 00^a1968, mâas allâa del mito /^c[edited by] Esteban Ascencio  ; testimonios de Raâul Alvarez Garâin ... [et al.].
+246 30^a1968
+250   ^a1. ed.
+260   ^aMâexico, D.F. :^bEdiciones del Milenio,^c1998.
+300   ^a153 p. ;^c20 cm.
+650  0^aStudent movements^zMexico^xHistory^y20th century.
+650  0^aCollege students^zMexico^xPolitical activity.
+650  0^aCollege students^zMexico^vInterviews.
+700 1 ^aAscencio, Esteban.
+700 1 ^aAlvarez Garâin, Raâul.
+923   ^d19990928^n35968^sMxMxBFM
+</textarea></td></tr></table></td></tr></table></td></tr></table>
+<tr><td align="center"><table cellspacing="0" cellpadding="2" width="97%"  border="0" bgcolor="#000000">
+<tr><td align="center"><table cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#ffffff">
+<tr><td width="4%" align="left" valign="top"><table cellspacing="0" cellpadding="2" border="0"><tr><td align="center" class=td>
+2/53<br><a href="javascript:Transmitir(1)"><img src=img/registro.gif border=0 alt="Catalogar este registro"></a></td></tr></table></td><td width="96%"><table cellspacing="3"><tr><td><textarea cols=80 rows=20 name=marc>001 1203941
+005 19980624155103.4
+008 980317s1997    mx ab    b    000 0 spa  
+035   ^9(DLC)   98127025
+906   ^a7^bcbc^corignew^d2^encip^f19^gy-gencatlg
+955   ^aoc01 to cat 03-17-98; sb00 03-30-98; sb04/desc 04-21-98; sb21 06-23-98
+010   ^a   98127025 
+040   ^aDLC^cDLC
+043   ^an-mx---
+050 00^aHD329.S64^bC64 1997
+245 00^aColonizaciâon, cultura y sociedad /^cXochitl Levya Solano y Gabriel Ascencio Franco, editores ; contribuciones, Luis Aboites Aguilar ... [et al.].
+250   ^a1. ed.
+260   ^a[Chiapas, Mâexico] :^bUniversidad de Ciencias y Artes del Estado de Chiapas,^c1997.
+300   ^a246 p. :^bill., maps ;^c22 cm.
+504   ^aIncludes bibliographical references.
+650  0^aLand settlement^zMexico, Southeast^xHistory.
+650  0^aColonization^zMexico, Southeast^xHistory.
+700 2 ^aLeyva Solano, Xochitl.
+700 2 ^aAscencio Franco, Gabriel.
+700 1 ^aAboites, Luis.
+922   ^aap
+991   ^bc-GenColl^hHD329.S64^iC64 1997^tCopy 1^wBOOKS
+</textarea></td></tr></table></td></tr></table></td></tr></table>
+<tr><td align="center"><table cellspacing="0" cellpadding="2" width="97%"  border="0" bgcolor="#000000">
+<tr><td align="center"><table cellspacing="0" cellpadding="0" width="100%" border="0" bgcolor="#ffffff">
+<tr><td width="4%" align="left" valign="top"><table cellspacing="0" cellpadding="2" border="0"><tr><td align="center" class=td>
+3/53<br><a href="javascript:Transmitir(2)"><img src=img/registro.gif border=0 alt="Catalogar este registro"></a></td></tr></table></td><td width="96%"><table cellspacing="3"><tr><td><textarea cols=80 rows=20 name=marc>001 12269531
+005 20010817145829.0
+008 010104s        mx a     b    100 0 spa  
+906   ^a7^bcbc^corignew^d2^encip^f20^gy-gencatlg
+925 0 ^aacquire^b1 shelf copy^xpolicy default
+955   ^aoc08 01-03-01 to HLCD;^dlk03 2001-08-06 received for subject; sent to shelflisting 2001-08-06 AA3s;^elj17 2001-08-08 to Dewey^aaa20 2001-08-17
+010   ^a  2001317191
+020   ^a9683684181
+040   ^aDLC^cDLC^dDLC
+041 0 ^aspaengpor
+050 00^aHM851^b.C674 2000
+082 00^a303.48/33^221
+245 00^aContribuciâon al desarrollo de la sociedad del conomiciemto /^ceditores, Margarita Almada de Ascencio ... [et al.].
+250   ^a1. ed.
+260   ^aMâexico, D.F. :^bUniversidad Nacional Autâonoma de Mâexico,^c2000.
+300   ^axii, 486 p. :^bill. ;^c21 cm.
+440  0^aColecciâon Sistemas bibliotecarios de informaciâon y sociedad ;^v1
+546   ^aArticles in Spanish, English, and Portuguese.
+500   ^aPapers originally presented at the 17th Coloquio de Investigaciâon Bibliotecolâogica held in Mexico City, Sept. 6-10, 1999.
+504   ^aIncludes bibliographical references.
+650  0^aInformation society^vCongresses.
+650  0^aLibraries and society^vCongresses.
+700 1 ^aAlmada de Ascencio, Margarita.
+711 2 ^aColoquio de Investigaciâon Bibliotecolâogica^n(17th :^d1999^cMexico City, Mexico)
+</textarea></td></tr></table></td></tr></table></td></tr></table>
+</tr><tr><td align="center"><table cellspacing="0" cellpadding="2" width="97%" border="0"><tr><td>&nbsp;&nbsp;1-25&nbsp;<a href=z3950-dm.php?start=26&number=25&reintentar=10&term=ascencio&field=Todos+los+campos&element=F&syntax=usmarc&host%5B%5D=z3950.loc.gov%3A7090%2Fvoyager^s^fF>26-50</a>&nbsp;<a href=z3950-dm.php?start=51&number=25&reintentar=10&term=ascencio&field=Todos+los+campos&element=F&syntax=usmarc&host%5B%5D=z3950.loc.gov%3A7090%2Fvoyager^s^fF>51-53</a></td></tr></table></td></tr></table>
+</td></tr>
+</table>
+</form>
+</body>
+</html>

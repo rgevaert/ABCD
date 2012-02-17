@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<collection id="37" lang="en" available="">
+  <item id="2" available="yes">Open Access Scientific Journals<description>Open Access Scientific Journals </description><portal>  </portal><meta-search/><item id="1" available="yes" href="http://www.scielo.org/index_i.html">SciELO - Scientific Electronic Library Online<description>       </description><portal>       </portal><meta-search base-search-url="http://www.scielo.br/webservices/?service=search&amp;count=1" search-parameters="expression=" base-browse-url="http://www.scielo.br/webservices/?service=search&amp;output=html&amp;lang=en"/></item></item>
+</collection>

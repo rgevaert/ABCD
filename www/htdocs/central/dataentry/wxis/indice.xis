@@ -1,0 +1,29 @@
+ <IsisScript>
+	<trace>xOn</trace>
+    <section>
+		<field action=cgi tag=5001>base</field>
+		<field action=cgi tag=5015>cipar</field>
+		<field action=cgi tag=5082>campo</field>
+		<field action=cgi tag=2020>prefijo</field>
+		<field action=cgi tag=2021>hasta</field>
+		<field action=cgi tag=1>path_db</field>
+       	<parm name=cipar>
+          	<pft>replace(s(cat(v5015)),'%path_database%',v1)/</pft>
+       	</parm>
+
+    	<parm name=actab><pft>cat('isisac.tab')</pft></parm>
+    	<parm name=uctab><pft>cat('isisuc.tab')</pft></parm>
+<display><pft>ALL</pft></display>
+		<do task=keyrange>
+       		<parm name=db><pft>v5001</pft></parm>
+       		<parm name=from><pft>v2020</pft></parm>
+			<parm name=to><pft>if p(v2021) then v2021'ZZZZZZZ' else v2020'ZZZZZZZ' fi</pft></parm>
+
+           	<field action=define tag=2010>Isis_Key</field>
+           	<field action=define tag=2011>Isis_Postings</field>
+           	<loop>
+            	<display><pft>v2010/</pft></display>
+           	</loop>
+       	</do>
+    </section>
+ </IsisScript>

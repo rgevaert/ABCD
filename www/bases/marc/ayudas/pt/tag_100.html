@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<META HTTP-EQUIV="Content-Type" Content="text/html; charset=Windows-1252">
+<TITLE>(Untitled)</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000">
+
+<P><A NAME="cmp100"></A></P>
+
+<P><B>100Entrada Principal – Nombre Personal (O - NR)</B></P>
+
+<P><I>Un nombre personal usado como entrada principal del registro bibliográfico. Corresponde al nombre de la persona que escribió el documento. Se ingresa primero los apellidos y luego los nombres. </I></P>
+
+<P><B>Indicadores:</B></P>
+
+<P>1er Indicador = tipo de nombre personal como entrada principal – un valor que indica la forma del elemento nombre como entrada.</P>
+
+<P>0 = Solo nombre = el nombre es uno solo o es un nombre que tiene palabras, iniciales, etc. Que están formateadas en orden directo</P>
+
+<P>1 = Apellido – Uno o varios apellidos en orden invertido con un nombre sin apellidos que se conoce como apellidos. (Definición de acuerdo a USMARC). La definición en MARC este valor es para un solo apellido y varios nombres.</P>
+
+<P>2 = Varios apellidos – no aparece en USMARC y aparece en MARC.</P>
+
+<P>3 = Nombre de Familia – El nombre representa una familia, un clan, una dinastía, una casa, u otro grupo similar el cual puede ser formateado en forma directa o invertido.</P>
+
+<P>2do - En Blanco (_)</P>
+
+<P><B>Subcampos:</B></P>
+
+<P>^a Nombre Personal (NR) – el apellido y/o nombre, letras, iniciales, abreviaturas, frases o números usados para remplazar el nombre o el nombre de la familia.</P>
+
+<P>^b Numeración (NR) – un numero romano y las partes siguientes del apellido cuando el 1er indicador tiene valor 0. </P>
+
+<P>^c Títulos y otras palabras asociadas con el nombre (R) </P>
+
+<P>^d Fechas asociadas con el nombre (NR) – fechas de nacimiento, muerte o cualquier otra fecha asociada al nombre.</P>
+
+<P>^e Término de la relatoria (R) –un término que describe la relación entre el nombre de la personal y el trabajo.</P>
+
+<P>^f Fecha del trabajo (NR) – una fecha de publicación que corresponda con el titulo del trabajo ingresado en el subcampo titulo/nombre.</P>
+
+<P>^g Información miscelánea (NR) – un dato que no se puede ingresar en ningún otro de los <B>Subcampos:</B> definidos. </P>
+
+<P>^k Formas de subencabezamientos (R) </P>
+
+<P>^l Idioma del trabajo (NR) – Este campo de idioma debe utilizarse con el campo titulo/nombre.</P>
+
+<P>^n Número de la parte/sección del trabajo (R) – un numero de designación para una parte de un trabajo que se utiliza con el campo titulo/nombre.</P>
+
+<P>^p Nombre de una parte/section del trabajo (R) – un nombre de una parte o sección de un trabajo que se utiliza con el campo nombre/titulo.</P>
+
+<P>^q Forma completa del nombre (NR) – una forma mas completa del nombre que la contenida en el subcampo ^a.</P>
+
+<P>^t Título del trabajo (NR) – un titulo uniforme, el titulo de la pagina principal del trabajo, o un título de serie usada en el campo nombre/titulo.</P>
+
+<P>^u Afiliación (NR) – una afiliación o la dirección de la persona.</P>
+
+<P>^4 Código de relator. (R) – un código de USMARC para los relatores que describe la relación entre el nombre y el trabajo. (El código debe ser tomado del USMARC Code List for Relators, Sources, Description Conventions y ese un elemento de autoridad – vea Anexo F).</P>
+
+<P>^6 Apuntador (NR) – una etiqueta que apunta a un campo asociado y dos caracteres con el número de la ocurrencia (justificados a la derecha con cero en la posición no usada) que une los campos que tienen representaciones gráficas alternas, subcampo ^6 es el 1er subcampo en el campo y tiene la siguiente estructura: [etiqueta][ocurrencia]</P>
+
+<P><B>Ejemplos:</B></P>
+
+<P>100 0_^a110908.</P>
+
+<P>100 0_^aDr. X.</P>
+
+<P>100 0_^aAuthor of The diary of a physician, ^d1807-1877.</P>
+
+<P>100 0_^aClaude, ^cd'Abbeville, pere, ^dd. 1632.</P>
+
+<P>100 0_^aHoward.</P>
+
+<P>100 1_^aFitzgerald, David.</P>
+
+<P>100 1_^aChiang, Kai-shek, ^d1887-1975.</P>
+
+<P>100 1_^aWatson, ^cRev.</P>
+
+<P>100 1_^aQ., Mike.</P>
+
+<P>100 1_^aBlackbeard, Author of, ^d1777-1852.</P>
+
+<P>100 1_^aLe Conte, John Eatton, ^d1784-1860.</P>
+
+<P>100 1_^aEl-Abiad, Ahmed H., ^d1926-</P>
+
+<P>100 0_^aJohn Paul ^bII, ^cPope, ^d1920- </P>
+
+<P>100 1_^aSeuss, ^cDr.</P>
+
+<P>100 1_^aChurchill, Winston, ^cSir, ^d1874- 1965.</P>
+
+<P>100 1_^aWard, Humphrey, ^cMrs., ^d1851- 1920.</P>
+
+<P>100 1_^aWalle-Lissnijder, ^cvan de.</P>
+
+<P>100 0_^aThomas, ^cAquinas, Saint, ^d1225?-1274.</P>
+
+<P>100 0_^aBlack Foot, ^cChief, ^dd. 1877 ^c(Spirit)</P>
+
+<P>100 1_^aLevi, James, ^dfl. 1706-1739.</P>
+
+<P>100 1_^aJoannes Aegidius, Zamorensis, ^d1240 or 41-ca. 1316.</P>
+
+<P>100 0_^aH. D. ^q(Hilda Doolittle), ^d1886-1961.</P>
+
+<P>100 1_^aGresham, G. A. ^q(Geoffrey Austin)</P>
+
+<P>100 1_^aSmith, Elizabeth ^q(Ann Elizabeth)</P>
+
+<P>100 1_^aBeeton, ^cMrs. ^q(Isabella Mary), ^d1836- 1865.</P>
+
+<P>100 1_^a`Atthawimonbandit (To), ^cPhra, ^d1883- 1973.</P>
+
+<P>100 1_^aBrown, B. F. ^uChemistry Dept., American University.</P>
+
+<P>100 3_^aFarquhar family.</P>
+
+<P>100 1_^aMorgan, John Pierpont, ^d1837-1913, ^ecollector.</P>
+
+<P>100 0_^aJuan, ^cEl Bautista, Santo.</P>
+
+<P>100 2_^aGarcia Marquez, Gabriel ^d1940-</P>
+
+<P>100 1_^aGregory, Ruth W.^q(Ruth Wilheme), ^d1910-</P>
+
+<P>100 0_^Aristófanes</P>
+
+<P>100 0_^aEusebio, ^cObispo de Cesarea</P>
+
+<P>100 0_^aHomero</P>
+
+<P>100 0_^aPlatón</P>
+
+<P>AACR2. Capítulo 22</P>
+
+<P><B>Fuente: </B></P>
+
+<P><B>Manual de MARC / preparado por Ana María Ocampo-Ocampo</B></P>
+
+<P><B>Bogotá: ASOISIS, 1998.</B></P>
+
+</BODY>
+</HTML>

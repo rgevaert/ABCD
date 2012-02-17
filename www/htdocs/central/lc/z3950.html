@@ -1,0 +1,151 @@
+<html>
+   <head>
+	  	<STYLE TYPE="text/css">  
+		.td {  font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 8pt; color: #00626C }
+		.td5 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 12pt; color: #000000; background-color: #FFCC00; font-weight: bold; border-style: none; clip:  rect(   )}
+		BODY {FONT-FAMILY: Verdana, Helvetica, Arial; FONT-SIZE: 9pt }
+		input 		{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		select 		{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		textarea	{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+		text	{BORDER-TOP-COLOR: #000000; BORDER-LEFT-COLOR: #000000; BORDER-RIGHT-COLOR: #000000; BORDER-BOTTOM-COLOR: #000000; BORDER-TOP-WIDTH: 1px; BORDER-LEFT-WIDTH: 1px; FONT-SIZE: 8pt; BORDER-BOTTOM-WIDTH: 1px; FONT-FAMILY: Verdana,Helvetica; BORDER-RIGHT-WIDTH: 1px}
+
+		</STYLE>
+
+      	<title>DocuManager. Z39.50</title>
+   </head>
+<script language=javascript>
+   function AbrirVentana(){
+        msgwin=window.open("","Marc","status=yes,resizable=yes,toolbar=no,menu=no,scrollbars=yes,width=800,height=600,top=00,left=00")
+        msgwin.focus()
+   }
+   function Reintentar(){
+       document.CapturarZ3950.submit()
+       return true
+   }
+function Transmitir(){
+   var Cuenta
+   Seq="xx"
+   	campo=document.CapturarZ3950.Marc.value
+    	if (campo=="") {
+         	alert("No hay información para transferir")
+           return
+      	}
+       re = /\$/gi;
+       campo=campo.replace(re,"^")
+      	i=campo.indexOf("\n"+"  ",0)
+		while (i>0){
+			campo=campo.substr(0,i-1)+campo.substr(i+2)
+      		i=campo.indexOf("\n"+"  ",0)
+		}
+       document.forma1.ValorCapturado.value=campo
+       BD=document.forma1.base.value
+       BD="&base="+BD+"&cipar="+document.forma1.cipar.value
+       document.forma1.target="main"
+       document.forma1.submit()
+       document.CapturarZ3950.Marc.value=""
+         
+    
+   }
+ function Isbn(){
+	ix1=document.z39.isbn.length
+	listaI=""
+	for (i=0;i<ix1;i++){
+		if (document.z39.isbn[i].value!=""){
+			if (listaI==""){
+				listaI=document.z39.isbn[i].value
+			}else{
+				listaI=listaI+"\n"+document.z39.isbn[i].value
+			}
+		}
+	}
+	document.z39.isbn_l.value=listaI
+}
+   </script> 
+   <body bgcolor="#ffffff" text="#000000" background=fondo.gif>
+	<center>
+	<span class=td5>Catalogación via Z39.50 esta es</span><p>
+	<form method="get" action=http://www.msinfo.info/intranet/php/z3950-dm.php  onSubmit=Isbn() name=z39>
+	<table width=600 border=0>
+		<td class=td>
+			Conexión: 
+		</td>
+		<td>
+			<select name="host[0]">
+				<option value="z3950.loc.gov:7090/voyager^susmarc^fF">Biblioteca del Congreso (LC)				
+				<option value="">Ninguno
+			</select>
+		</td>
+		<tr>
+		<td colspan=2 bgcolor=lightgrey>&nbsp;</td>
+
+		<tr>
+		<td class=td>   		Buscar: 
+		</td>
+		<td>
+			<input type="text" size="50" name="term" value="">		 	
+				<select name="field">
+				<option value="Todos los campos">Todos los campos
+				<option value="Título">Título
+				<option value="Autor">Autor
+				<option value="ISBN">ISBN
+				<option value="ISSN">ISSN
+				<option value="EDITORIAL">Editorial
+				<option value="Resumen">Resumen
+			</select>
+		</td>
+		<tr>
+		<td></td>
+		<td>
+			<input type="text" size="50" name="term1" value="">			<select name="field1">
+				<option value="Todos los campos">Todos los campos
+				<option value="Título">Título
+				<option value="Autor">Autor
+				<option value="ISBN">ISBN
+				<option value="ISSN">ISSN
+				<option value="EDITORIAL">Editorial
+				<option value="Resumen">Resumen
+			</select>
+		</td>
+		<tr>
+	</table>
+<p>	<table width=600>
+		<td colspan=5 bgcolor=linen align=center><font size=2><b>Para búsquedas más directas, indique los ISBN que desea localizar</b></td>		<tr>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<tr>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<tr>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<tr>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<tr>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+		<td align=center><input type=text size=15 name=isbn value=""</td>
+	</table>
+<input type=hidden name=isbn_l value="">
+<p>Presentar &nbsp; <input type=text name=number value="25" size=4> &nbsp; registros
+y reintentar &nbsp; <input type=text name=reintentar value="10" size=2> &nbsp; veces la conexión
+<p><input type="submit" name="action" value="Buscar"><input type=hidden name=start value="1">
+</form>
+<a href=lc.html >Simulación de resultados</a>
+<!-- /intranet/www/capturaregistro.pft -->
+     </body>
+</html>

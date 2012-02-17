@@ -1,0 +1,18 @@
+Tipo de registro
+Número de Estoque
+Volume
+Tombo
+Código de Usuário
+Data do empréstimo
+empréstimo Tempo
+Data de Devolução
+Tempo de retorno
+Tipo de Usuário
+Tipo de Objeto
+Classificação n º
+Controle objeto Number
+Banco de Dados
+Referência
+Operador e data do empréstimo
+Operador data de retorno
+Renovações

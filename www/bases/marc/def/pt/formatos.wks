@@ -1,0 +1,28 @@
+VM_g_NL|Material projetável – Nac.|ALL
+VM_g_ML|Material projetável – Min.|ALL
+VM_k_NL|Mat. gráfico bidimens. não projet. – Nac.|ALL
+VM_k_ML|Mat. gráfico bidimens, não projetá. – Min.|ALL
+VM_o_ML|Kit (dois ou mais tipos) – Min.|ALL
+VM_o_NL|Kit (dois ou mais tipos) – Nac.|ALL
+VM_p_NL|Material misto – Nac.|ALL
+VM_p_ML|Material misto - Min.|ALL
+VM_r_ML|Objeto tridimensional – Min.|ALL
+VM_r_NL|Objeto tridimensional – Nac.|ALL
+BK_a_NL|Material textual - Nac.|ALL
+BK_a_ML|Material Textual - Min.|ALL
+AM_t_NL|Mat. Taxtual Manuscrito - Nac.|ALL
+AM_t_ML|Mat. Taxtual Manuscrito - Min.|ALL
+CF_m_NL|Arquivo de Computador - Nac.|ALL
+CF_m_ML|Arquivo de Computador - Min.|ALL
+MP_e_NL|Material cartográfico - Nac.|ALL
+MP_e_ML|Material Cartográfico - Min.|ALL
+MP_f_NL|Mat. Cartogr. Manuscrito - Nac.|ALL
+MP_f_ML|Mat. Cartogr. Manuscrito - Min.|ALL
+MU_c_NL|Música impressa – Nac. |ALL
+MU_c_ML|Música impressa – Min.|ALL
+MU_d_NL|Música manuscrita – Nac.|ALL
+MU_d_ML|Música manuscrita – Min.|ALL
+MU_i_NL|Gravação de som não musical – Nac.|ALL
+MU_i_ML|Gravação de som não musical – Min|ALL
+MU_j_NL|Gravação de som musical – Nac.|ALL
+MU_j_ML|Gravação de som musical – Min.|ALL

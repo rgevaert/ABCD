@@ -1,0 +1,5 @@
+20:if a(v20) then 'Falta o campo 20' fi
+510:"Falta el campo 510"n510
+245: if a(v245) then 'Falta o campo 245 - Título principal' fi
+100:if a(v100) and a(v110) and a(v111) then 'Falta entrada principal - campo 100, 110 ou 111' fi
+900:if a(v900) then 'Falta o campo 900' fi

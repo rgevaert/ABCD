@@ -1,0 +1,5 @@
+'<table border=0 width=90%>'
+if p(v10) then '<tr><td width=20% valign=top><font face=arial size=2><b>User Code</b></td><td valign=top><font face=arial size=2>'v10+|<br>|,'</td>' fi/
+if p(v20) then '<tr><td width=20% valign=top><font face=arial size=2><b>Control Number</b></td><td valign=top><font face=arial size=2>'v20+|<br>|,'</td>' fi/
+if p(v30) then '<tr><td width=20% valign=top><font face=arial size=2><b>Date of reservation</b></td><td valign=top><font face=arial size=2>'v30+|<br>|,'</td>' fi/
+'</table><p>'

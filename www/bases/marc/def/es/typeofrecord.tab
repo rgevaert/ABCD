@@ -1,0 +1,29 @@
+3006 307
+BK_a_ML.fmt|a|m|Material no-manuscrito - Min.
+BK_a_NL.fmt|a|m|Material no-manuscrito - Nat.
+MU_c_ML.fmt|c|m|Grabación sonora no musical - Min.
+MU_c_NL.fmt|c|m|Grabación sonora no musical - Nat.
+MU_d_ML.fmt|d|m|Grabación musical munuscrita - Min,
+MU_d_NL.fmt|d|m|Grabación musical munuscrita - Nat.
+MU_i_ML.fmt|i|m|Grabación sonora no registrada - Min.
+MU_i_NL.fmt|i|m|Grabación sonora no registrada - Nat.
+MU_j_ML.fmt|j|m|Grabación sonora registrada - Min.
+MU_j_NL.fmt|j|m|Grabación sonora registrada - Nat.
+VM_o_ML.fmt|o|m|Kit o Conjunto en soportes multiplos - Min
+VM_o_NL.fmt|o|m|Kit o Conjunto en soportes multiplos - Nat.
+VM_r_ML.fmt|r|m|Artefacto o equipo em 3D - Min.
+VM_r_NL.fmt|r|m|Artefacto o equipo em 3D - Nat.
+VM_g_ML.fmt|g|m|Material visual para proyectar - Min.
+VM_g_NL.fmt|g|m|Material visual para proyectar - Nat.
+VM_p_ML.fmt|p|m|Materiales mixtos - Min.
+VM_p_NL.fmt|p|m|Materiales mixtos - Nac.
+VM_k_ML.fmt|k|m|Documeto proyectable en 2D - Min.
+VM_k_NL.fmt|k|m|Documeto proyectable en 2D - Min.
+CF_m_ML.fmt|m|m|Archivo de computadora - Min.
+CF_m_NL.fmt|m|m|Archivo de computadora - Nac.
+MP_e_ML.fmt|e|m|Documento cartografico - Min.
+MP_e_NL.fmt|e|m|Documento cartografico - Nat.
+AM_t_ML.fmt|t|m|Texto o material manuscrito o impresso manualmente - Min.
+AM_t_NL.fmt|t|m|Texto o material manuscrito o impresso manualmente - Nat.
+MP_f_ML.fmt|f|m|Documento cartografico manuscrito - Min.
+MP_f_NL.fmt|f|m|Documento cartografico manuscrito - Nat.

@@ -1,0 +1,60 @@
+<font face="Arial" size="3">
+
+<p><strong>Bloqueio e desbloqueio de registros</strong></p></font>
+
+<p><font face="Arial" size="2">Quando um operador autorizado abre e edita um registro, este &eacute; bloqueado para que outro usu&aacute;rio n&atilde;o possa atualiz&aacute;-lo simultaneamente.</p>
+
+<p>Quando este registro &eacute; atualizado ou a edi&ccedil;&atilde;o &eacute; cancelada (bot&otilde;es salvar ou cancelar da barra de ferramentas), o registro &eacute; liberado ficando dispon&iacute;vel para os outros operadores</p>
+
+<p>Se o ciclo de atualiza&ccedil;&atilde;o n&atilde;o &eacute; completado, isto &eacute;, o registro n&atilde;o &eacute; salvo&nbsp; e nem
+&eacute; cancelada a atualiza&ccedil;&atilde;o (bot&otilde;es salvar ou cancelar da barra de ferramentas), o registro fica bloqueado por um tempo (4 horas) para os demais usu&aacute;rios.</p>
+
+<p>Existem duas formas para eliminar o bloqueio antes que seja esgotado o tempo
+mencionado acima:</p>
+
+<ol>
+
+    <li>Se o mesmo operador que bloqueou o registro, solicita de novo sua edi&ccedil;&atilde;o, ent&atilde;o, ter&aacute; o direito de atualizar o registro, podendo atualizar ou cancelar a edi&ccedil;&atilde;o para liberar o registro </li>
+
+    <li>Outra forma de desbloquear os registros &eacute; utilizando a op&ccedil;&atilde;o <strong>Desbloquear registros</strong> do menu <strong>Utilit&aacute;rios </strong>da barra de ferramentas.&nbsp;Somente o&nbsp;Administrador do&nbsp;Sistema ou o Administrador da Base de&nbsp;Dados tem acesso a esta op&ccedil;&atilde;o.</li></font>
+</ol>
+
+<p>&nbsp;</p>
+
+<hr />
+
+<p>&nbsp;</p>
+
+<p><font face="Arial" size="3"><strong>Op&ccedil;&otilde;es habilitadas na edi&ccedil;&atilde;o de registros</strong></p></font>
+
+<p><font face="Arial" size="2">Use os t&iacute;tulos das se&ccedil;&otilde;es identificadas na parte superior,&nbsp;para navegar no interior do formul&aacute;rio.</p>
+
+<p>Use <img alt="" src="../php/dataentry/img/defaultButton_list.png" />&nbsp;para consultar e capturar os termos da lista controlada, lista de autoridades, dicion&aacute;rio de
+termos ou o tesauro associado ao campo correspondente. Clicando nos termos da lista exibida, estes s&atilde;o transferidos ao campo correspondente. Se o campo est&aacute; definido como repetitivo e a caixa de entrada tem mais de uma linha do tipo <strong>Texto (&Aacute;rea de texto)</strong>, ent&atilde;o, &eacute; transferido um
+termo em cada linha, formando desta forma as ocorrências do campo repetitivo. Se o campo tem s&oacute; uma linha, no caso de serem selecionados mais de um
+termo, os mesmos&nbsp;estar&atilde;o separados por ponto e v&iacute;rgula (;). Lembre que o formato de exibi&ccedil;&atilde;o dos
+termos da lista controlada pode ser diferente do formato de extra&ccedil;&atilde;o do campo, isto &eacute;, o formato de exibi&ccedil;&atilde;o pode omitir os subcampos, por&eacute;m o formato de extra&ccedil;&atilde;o pode incluir os subcampos. Esta&nbsp; condi&ccedil;&atilde;o se controla na&nbsp;FDT da base de dados.</p>
+
+<p>Use <img alt="" src="../php/dataentry/img/s2.gif" />&nbsp;para abrir o assistente para manipular as ocorrências e subcampos de um campo repetitivo</p>
+
+<p>Use <img alt="" src="../php/dataentry/img/question.gif" />&nbsp;para ver a ajuda da entrada de dados do campo.</p>
+
+<p>Ao terminar a edi&ccedil;&atilde;o do registro, clique em <img alt="" src="../php/dataentry/img/recordvalidation.gif" />&nbsp; para validar o registro antes de armazen&aacute;-lo na base de dados (esta op&ccedil;&atilde;o s&oacute; aparecer&aacute; se existe o formato de valida&ccedil;&atilde;o como parte dos arquivos de defini&ccedil;&atilde;o da estrutura da base de dados).</p>
+</font>
+<p><font size="2" face="Arial"><strong><font >Valida&ccedil;&atilde;o de registros</font></strong></font></p>
+
+<p><font face="Arial"  size="2">A</font><font face="Arial"  size="2"> valida&ccedil;&atilde;o de registros permite&nbsp;definir, para cada campo da base de
+dados, um formato (PFT) que se utilizar&aacute; para determinar a consist&ecirc;ncia dos dados antes de
+armazenar cada registro ou ao clicar sobre o link <strong>Validar registro&nbsp;</strong>quando se est&aacute; percorrendo a base de dados.</font></p>
+<p><font face="Arial"  size="2">O</font><font face="Arial"  size="2"> formul&aacute;rio de valida&ccedil;&atilde;o cont&eacute;m uma entrada para cada campo definido na FDT e uma caixa de texto para colocar o formato de valida&ccedil;&atilde;o a ser aplicado individualmente sobre cada campo. Al&eacute;m disso, &eacute; exibida uma caixa de sele&ccedil;&atilde;o (
+      <input name="checkbox" type="checkbox" value="on" />
+) que permite condicionar a grava&ccedil;&atilde;o do registro ao resultado da valida&ccedil;&atilde;o, se a caixa est&aacute; marcada e se est&aacute; entrando ou modificando um registro, ent&atilde;o o registro n&atilde;o ser&aacute; gravado se algum dos campos marcados n&atilde;o atende a condi&ccedil;&atilde;o de valida&ccedil;&atilde;o. A condi&ccedil;&atilde;o de valida&ccedil;&atilde;o &eacute; considera n&atilde;o atendida se o formato que se aplica sobre o campo devolve algum valor.</font></p>
+<p><font face="Arial"  size="2">No</font><font face="Arial"  size="2"> procedimento de entrada, no momento de atualizar um registro,&nbsp;se constr&oacute;i um formato onde se consolidam as valida&ccedil;&otilde;es parciais. Este formato se aplica ao registro e atrav&eacute;s do mesmo&nbsp;se pode detectar qual campo gerou erro e determinar se o erro produzido permite ou n&atilde;o a atualiza&ccedil;&atilde;o do registro.</font></p>
+<p><font face="Arial"  size="2">Se o registro n&atilde;o atende a valida&ccedil;&atilde;o, os erros encontrados s&atilde;o exibidos. Se&nbsp;&nbsp;algum dos&nbsp;campos que geraram o erro est&atilde;o marcados no formato de valida&ccedil;&atilde;o como <strong>Erro fatal</strong> (foi selecionada a caixa correspondente no formato de valida&ccedil;&atilde;o), o registro n&atilde;o &eacute; atualizado e &eacute; exibido um link para&nbsp;retornar &agrave;s mudan&ccedil;as realizadas e efetuar as corre&ccedil;&otilde;es necess&aacute;rias.</p>
+<p><font >Se nenhum dos campos que geraram erro est&aacute; marcado como <strong>Erro fatal</strong>,
+emite o relat&oacute;rio de valida&ccedil;&atilde;o e o registro &eacute; atualiza</font>do.</p>
+<p><font size="2" face="Arial">Use <img alt="" src="../php/dataentry/img/barSave.png" />&nbsp; para salvar o registro;</font></p>
+<font face="Arial" size="2"><p>&nbsp;<img alt="" src="../php/dataentry/img/barCancelEdit.png" />&nbsp; para cancelar a edi&ccedil;&atilde;o do registro, ou </p>
+<p><img alt="" src="../php/dataentry/img/barDelete.png" />&nbsp; para apagar o registro</p>
+<p><strong>Nota importante:&nbsp;Se o registro n&atilde;o foi alterado usar o bot&atilde;o cancelar em vez de salvar, para garantir a integridade da base de dados</strong></p>
+</font>

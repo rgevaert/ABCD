@@ -1,0 +1,20 @@
+M|8|Campo Fijo (08)|0|0||||||||||||1|
+S||00-05 Fecha de ingreso|0|0|||X||6|||||||0|
+S||06-06 Tipo de Fecha/Estado de la publicación|0|0|||X||1|||||||0|
+S||07-10 Fecha 1|0|0|||X||4|||||||0|
+S||11-14 Fecha 2|0|0|||X||4|||||||0|
+S||15-17 Lugar publicación, producción o ejecución|0|0|||X||3|P|0815.tab|||||0|
+S||18-21 Relieves|0|1|||X||4|P|mp_18-21.tab|||||0|
+S||22-23 Proyección|0|0|||X||2|P|mp_22-23.tab|||||0|
+S||24-24 No use|0|0|||X||1|||||||0|
+S||25-25 Tipo de material cartografico|0|0|||X||1|P|mp_25.tab|||||0|
+S||26-27 No use|0|0|||X||2|||||||0|
+S||28-28 Public.Oficial|0|0|||X||1|P|bk_28.tab|||||0|
+S||29-29 Forma del Item|0|0|||X||1|P|mp_29.tab||||0||
+S||30-30 No use|0|0|||X||1|||||||0|
+S||31-31 Indice|0|0|||X||1|P|0831.tab|||||0|
+S||32-32 No use|0|0|||X||1|||||||0|
+S||33-34 Indice|0|1|||X||2|P|mp_33-34.tab|||||0|
+S||35-37 Idioma|0|0|||X||3|P|0835.tab|||||0|
+S||38-38 Modific.registro|0|0|||X||1|P|0838.tab|||||0|
+S||39-39 Fuente catalogación|0|0|||X||1|P|0839.tab|||||0|

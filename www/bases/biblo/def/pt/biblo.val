@@ -1,0 +1,3 @@
+2:if a(v2) then 'Falta o número de controle'  else e0:=l(['biblo']'CN_'v2)  'error: ' f(e0,1,0)   fi$$|$$false
+3:if a(v3) then 'Falta o número de classificação' fi$$|$$on
+101:'Faltam Registros'$$|$$

@@ -1,0 +1,23 @@
+<font size="3"><font face="Arial"><strong>Restaurar o N&uacute;mero de Tombo/Registro ou o N&uacute;mero de Controle de
+uma base de dados</font><br />
+<br />
+<font size="2"><font face="Arial">N&uacute;mero de Tombo/Registro</strong><br />
+<br />
+O n&uacute;mero de tombo &eacute; uma numera&ccedil;&atilde;o, que pode ser criada automaticamente no ABCD para os exemplares (c&oacute;pias). Este n&uacute;mero est&aacute; definido na FDT da base de dados com o tipo de campo <strong>Autoincrementar</strong> e &eacute; incrementado a cada registro criado, tomando o &uacute;ltimo valor armazenado e somando 1.<br />
+<br />
+O &uacute;ltimo valor armazenado &eacute; obtido de um arquivo denominado <strong>control_number.cn </strong>localizado na pasta data da base de dados em quest&atilde;o. <br />
+<br />
+Esta op&ccedil;&atilde;o modifica o valor do &uacute;ltimo n&uacute;mero atribu&iacute;do com o objetivo de restabelecer a numera&ccedil;&atilde;o dos registros.<br />
+<br />
+<strong>N&uacute;mero de Controle<br />
+<br />
+</strong>O n&uacute;mero de controle &eacute; um campo obrigat&oacute;rio nas bases de dados bibliogr&aacute;ficas cujos exemplares ser&atilde;o manipulados  atrav&eacute;s da base de dados <strong>copies</strong>, por ser o campo de rela&ccedil;&atilde;o entre o objeto e os seus itens f&iacute;sicos (exemplares).<br />
+<br />
+Como no caso anterior, ABCD pode gerar de forma autom&aacute;tica este n&uacute;mero de controle atrav&eacute;s de uma numera&ccedil;&atilde;o sequencial. O &uacute;ltimo n&uacute;mero atribu&iacute;do &eacute; mantido no arquivo <strong>control_number.cn </strong>localizado na pasta data da base de dados em quest&atilde;o.<br />
+<br />
+Esta op&ccedil;&atilde;o modifica o valor do &uacute;ltimo n&uacute;mero atribu&iacute;do com o objetivo de restabelecer o valor do n&uacute;mero de controle dos registros. </font></font><br />
+<br />
+<font face="Arial" size="2">Caso queira normalizar o n&uacute;mero de  controles de forma que em todos os registros tenha o mesmo tamanho em  bytes, o mesmo pode ser restabelecido com um valor de acordo com o tamanho previstro para a base de dados. Por exemplo: se a base de dados ter&aacute; no m&aacute;ximo 89.999 registros, pode-se iniciar ou restabelecer o n&uacute;mero de controle para 10000. Assim o primeiro ser&aacute; 10001, o
+segundo 10002, o terceiro 10003 e assim por diante.at&eacute; 99999 todos os n&uacute;meros de controle ter&atilde;o 5 d&iacute;gitos.
+Considerando que o valor atrib&uacute;ido para o primeiro registro foi 100000, esse exemplo permite gerar no m&aacute;ximo 89999 registros com n&uacute;mero de controle de 5 d&iacute;gitos.</font><br />
+</font></font>

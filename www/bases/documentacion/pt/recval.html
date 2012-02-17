@@ -1,0 +1,25 @@
+<p><strong><font face="Arial" size="3">Valida&ccedil;&atilde;o de registros</font></strong></p>
+
+<p><font face="Arial" size="2">A valida&ccedil;&atilde;o de registros permite definir, para cada campo da base de dados, um formato (PFT) que poder&aacute; ser usado para verificar a consist&ecirc;ncia da entrada de dados de um registro novo ou de um j&aacute; existente na base de dados.</font></p>
+
+<p><font face="Arial" size="2">Para isso &eacute; apresentado um formul&aacute;rio com todos os campos definidos na FDT e uma janela de texto para colocar o formato de valida&ccedil;&atilde;o a ser aplicado individualmente sobre cada campo.&nbsp; Al&eacute;m disso, &eacute; apresentada uma caixa de sele&ccedil;&atilde;o (<input type="checkbox" value="on" />) que permite condicionar a grava&ccedil;&atilde;o do registro de acordo com o resultado da valida&ccedil;&atilde;o. Se a caixa estiver marcada, ent&atilde;o, ao inserir dados ou modificar um registro, o mesmo n&atilde;o ser&aacute; gravado se algum dos campos marcados n&atilde;o respeitar a condi&ccedil;&atilde;o de valida&ccedil;&atilde;o.</font></p>
+
+<p><font face="Arial" size="2">Com esta informa&ccedil;&atilde;o, no momento da entrada de dados, o ABCD constr&oacute;i um formato onde se consolidam as valida&ccedil;&otilde;es parciais. Este&nbsp;formato&nbsp;se aplica sobre o registro e exibe as mensagens que, na forma de literais incondicionais, avisam ao operador o resultado da valida&ccedil;&atilde;o.</font></p>
+
+<p><font face="Arial" size="2">Ao concluir o formul&aacute;rio de valida&ccedil;&atilde;o, s&atilde;o exibidas no final da p&aacute;gina as seguintes op&ccedil;&otilde;es:</font></p>
+
+<p><font face="Arial" size="2"><strong>Testar com o MFN: </strong>Aplica o formato de valida&ccedil;&atilde;o sobre o MFN
+informado e exibe o resultado. Digite na caixa correspondente o MFN do registro solicitado e clique em <strong>Testar</strong></font></p>
+
+<p><font face="Arial" size="2"><strong>Atualizar: </strong>Armazena na subpasta <strong>def </strong>da pasta da base de dados, o formato de valida&ccedil;&atilde;o criado. Este formato &eacute; gravado com o nome da base de dados e a extens&atilde;o <strong>.val </strong> e tem o seguinte formato (exemplo):</font></p>
+
+<p><font face="Courier New"><strong><font color="#800000">20:</font></strong>if a(v20) then 'falta o campo 20' fi<br />
+
+<strong><font color="#800000">510:</font></strong>"Falta o campo 510"n510<br />
+
+<strong><font color="#800000">900:</font></strong>if a(v900) then 'falta o campo 900' fi</font></p>
+
+<p><font face="Arial" size="2">Isto significa que cada formato de valida&ccedil;&atilde;o vem precedido pelo campo ao qual se refere para facilitar, desta forma, a modifica&ccedil;&atilde;o do mesmo quando for necess&aacute;rio.
+A literal produzida pelo formato ser&aacute; mostrada ao operador quando este solicitar a valida&ccedil;&atilde;o do registro</font></p>
+
+<p>&nbsp;</p>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<define>
+  <sourceList>
+    <group label="Database">
+      <item id="34-1" label="MARC" href="/iah/?base=MARC&amp;lang=en" base-search-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=MARC&amp;nextAction=xml&amp;count=1" base-browse-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=MARC&amp;nextAction=lnk"/>
+      <item id="34-2" label="CEPAL" href="/iah/?base=BIBLO&amp;lang=en" base-search-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=BIBLO&amp;nextAction=xml&amp;count=1" base-browse-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=BIBLO&amp;nextAction=lnk"/>
+      <item id="34-3" label="SERIALS" href="/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=TITLE&amp;pathLibrary=MAIN" base-search-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=TITLE&amp;nextAction=xml&amp;count=1&amp;pathLibrary=MAIN" base-browse-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=TITLE&amp;nextAction=lnk&amp;pathLibrary=MAIN"/>
+      <item id="34-5" label="DBLIL" href="/iah/?base=DBLIL&amp;lang=en" base-search-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=DBLIL&amp;nextAction=xml&amp;count=1" base-browse-url="http://localhost:9090/cgi-bin/wxis.exe/iah/scripts/?IsisScript=iah.xis&amp;lang=en&amp;base=DBLIL&amp;nextAction=lnk"/>
+    </group>
+    <group label="Open Access Scientific Journals">
+      <item id="37-1" label="SciELO - Scientific Electronic Library Online" href="http://www.scielo.org/index_i.html" base-search-url="http://www.scielo.br/webservices/?service=search&amp;count=1" base-browse-url="http://www.scielo.br/webservices/?service=search&amp;output=html&amp;lang=en"/>
+    </group>
+    <group label="Events directory">
+      <item id="31-2" label="Events directory" href="http://diretorios.bvs.br/direve/?lang=en" base-search-url="http://diretorios.bvs.br/webservices/?service=search&amp;count=1" base-browse-url="http://diretorios.bvs.br/webservices/?service=search&amp;lang=en&amp;output=html"/>
+    </group>
+    <group label="LIS- Health Information Locator">
+      <item id="31-4" label="LIS- Health Information Locator" href="http://lis.bvs.br/xml2html/xmlListT.php?xml%5B%5D=http://lis.bvs.br/lis-Regional/I/define.xml&amp;xsl=http://lis.bvs.br/lis-Regional/home.xsl" base-search-url="http://lis.bvs.br/webservices/?service=search&amp;count=1" base-browse-url="http://lis.bvs.br/webservices/?service=search&amp;output=html&amp;lang=en"/>
+    </group>
+  </sourceList>
+  <search>
+    <item source="34-1" search-parameters="exprSearch="/>
+    <item source="34-2" search-parameters="exprSearch="/>
+    <item source="34-3" search-parameters="exprSearch="/>
+    <item source="34-5" search-parameters="exprSearch="/>
+    <item source="37-1" search-parameters="expression="/>
+    <item source="31-2" search-parameters="expression="/>
+    <item source="31-4" search-parameters="expression="/>
+  </search>
+</define>
