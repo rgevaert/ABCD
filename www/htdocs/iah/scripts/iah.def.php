@@ -2,9 +2,9 @@
 [PATH]
 
 PATH_DATA=/iah/
-PATH_CGI-BIN=/ABCD/www/htdocs/iah/scripts/
-PATH_DATABASE=/ABCD/www/bases/
-PATH_DEF=/ABCD/www/bases/par/
+PATH_CGI-BIN=/opt/ABCD/www/htdocs/iah/scripts/
+PATH_DATABASE=/opt/ABCD/www/bases/
+PATH_DEF=/opt/ABCD/www/bases/par/
 
 [APPEARANCE]
 
