@@ -10,16 +10,16 @@ $config_date_format="DD/MM/YY";
 $app_path="central";
 
 //Path to the databases
-$db_path="/ABCD/www/bases/";
+$db_path="/opt/ABCD/www/bases/";
 
 //Path to the folder where the uploaded images are to be stored (the database name will be added to this path)
-$img_path="/abcd/www/htdocs/bases/";
+$img_path="/opt/ABCD/www/htdocs/bases/";
 
 //Path to the wwwisis executable (include the name of the program)
-$Wxis="/ABCD/www/cgi-bin/wxis.exe";
+$Wxis="/opt/ABCD/www/cgi-bin/wxis.exe";
 
 //Path to the wxis scripts
-$xWxis="/ABCD/www/htdocs/$app_path/dataentry/wxis/";
+$xWxis="/opt/ABCD/www/htdocs/$app_path/dataentry/wxis/";
 
 //default language
 $lang="en";
