@@ -449,7 +449,7 @@ function parseXMLstring( $xmlContent ){
   }
 
   // parse all xml in one fell swoop
-  if (!xml_parse($xml_parser, $xmlContent, "yes")) {
+  if (!xml_parse($xml_parser, $xmlContent, true)) {
     /*
 	die(sprintf("XML error: %s at line %d",
 		xml_error_string(xml_get_error_code($xml_parser)),

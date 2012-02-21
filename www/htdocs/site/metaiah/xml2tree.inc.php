@@ -457,7 +457,7 @@ function parseXMLstring( $xmlContent ){
   $xmlContent = utf8_encode($xmlContent);
   
   // parse all xml in one fell swoop
-  if (!xml_parse($xml_parser, $xmlContent, "yes")) {
+  if (!xml_parse($xml_parser, $xmlContent, true)) {
   	throw new ErrorException(
   			xml_error_string(xml_get_error_code($xml_parser)),
   			xml_get_error_code($xml_parser),  99,  'xml',
