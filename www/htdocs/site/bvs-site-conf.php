@@ -8,7 +8,7 @@ DEFAULT_LANGUAGE=en
 
 DIRECTORY=/site/
 SITE_PATH=/opt/ABCD/www/htdocs/site/
-DATABASE_PATH=/opt/ABCD/www/bases/site/
+DATABASE_PATH=/var/opt/ABCD/bases/site/
 SERVERNAME=localhost
 
 ;LETTER_UNIT=D:

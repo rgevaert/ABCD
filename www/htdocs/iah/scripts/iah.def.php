@@ -3,8 +3,8 @@
 
 PATH_DATA=/iah/
 PATH_CGI-BIN=/opt/ABCD/www/htdocs/iah/scripts/
-PATH_DATABASE=/opt/ABCD/www/bases/
-PATH_DEF=/opt/ABCD/www/bases/par/
+PATH_DATABASE=/var/opt/ABCD/bases/
+PATH_DEF=/var/opt/ABCD/bases/par/
 
 [APPEARANCE]
 

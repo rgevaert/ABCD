@@ -10,10 +10,10 @@ $config_date_format="DD/MM/YY";
 $app_path="central";
 
 //Path to the databases
-$db_path="/opt/ABCD/www/bases/";
+$db_path="/var/opt/ABCD/bases/";
 
 //Path to the folder where the uploaded images are to be stored (the database name will be added to this path)
-$img_path="/opt/ABCD/www/htdocs/bases/";
+$img_path="/var/opt/ABCD/uploads/";
 
 //Path to the wwwisis executable (include the name of the program)
 $Wxis="/opt/ABCD/www/cgi-bin/wxis.exe";
