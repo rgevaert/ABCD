@@ -21,6 +21,14 @@
 		Allow from all
 	</Directory>
 
+	Alias /bases/ "/var/opt/ABCD/uploads/"
+	<Directory "/var/opt/ABCD/uploads/">
+		Options Indexes FollowSymLinks MultiViews
+		AllowOverride None
+		Order allow,deny
+		allow from all
+	</Directory>
+
 	ErrorLog ${APACHE_LOG_DIR}/error.log
 
 	# Possible values include: debug, info, notice, warn, error, crit,
@@ -28,14 +36,4 @@
 	LogLevel warn
 
 	CustomLog ${APACHE_LOG_DIR}/access.log combined
-
-    Alias /doc/ "/usr/share/doc/"
-    <Directory "/usr/share/doc/">
-        Options Indexes MultiViews FollowSymLinks
-        AllowOverride None
-        Order deny,allow
-        Deny from all
-        Allow from 127.0.0.0/255.0.0.0 ::1/128
-    </Directory>
-
 </VirtualHost>
