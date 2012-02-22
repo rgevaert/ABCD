@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if ! [ -e /var/opt/ABCD/bases ]
+then
+	mkdir -p /var/opt/ABCD
+	cp -r /opt/ABCD/www/bases-examples /var/opt/ABCD/bases
+	chown -R www-data:www-data /var/opt/ABCD
+fi
+
+
+chown -R www-data:www-data /opt/ABCD/www/temp
