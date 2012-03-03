@@ -24,7 +24,6 @@ Finally can have to configure apache.   Have a look at installation/apache/ABCD_
 
 ## Links
 
-ABCD: http://bvsmodelo.bvsalud.org/php/level.php?lang=en&component=27&item=13
-FPM: https://github.com/jordansissel/fpm
-
-Primary contact: De Smet Egbert <egbert.desmet@ua.ac.be>
+* ABCD: http://bvsmodelo.bvsalud.org/php/level.php?lang=en&component=27&item=13
+* FPM: https://github.com/jordansissel/fpm
+* Primary contact: De Smet Egbert <egbert.desmet@ua.ac.be>
