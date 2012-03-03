@@ -1,8 +1,15 @@
 #!/bin/bash
 
-if which fpm
+if [ -z $1 ]
 then
-  fpm -n abcd -t deb -s dir --exclude .gitignore --exclude .git --post-install postinstall -d libapache2-mod-php5 -d php5-gd -d php5-xsl -d php5-yaz -v 1.2 --prefix /opt -C ../.. ABCD
+  ARCH=""
+else
+  ARCH="-a ${1}"
+fi
+
+if which fpm >/dev/null
+then
+  fpm -n abcd -t deb -s dir --exclude .gitignore --exclude .git --post-install postinstall -d libapache2-mod-php5 -d php5-gd -d php5-xsl -d php5-yaz -v 1.2 --prefix /opt -C ../.. $ARCH ABCD
 else
   echo fpm not in installed or not in path.
   exit 1

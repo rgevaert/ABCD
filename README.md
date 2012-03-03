@@ -15,7 +15,11 @@ When you cloned the git repository you can
     cd installation
     ./create_deb
 
-It will then create the Debian package in the installation directory.
+It will then create the Debian package (for you current architecture) in the installation directory.  Use
+
+   ./create_deb i386
+
+to create for e.g. i386
 
 ## Installing ABCD Debian package
 
